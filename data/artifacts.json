@@ -13,6 +13,38 @@
     "displayMode": "quote"
   },
   {
+    "id": "openstack-2013-artifact",
+    "chapterId": "founding-bloombase",
+    "type": "founding-proof",
+    "eyebrow": "Founding proof · 2013",
+    "title": "OpenStack community release is the earliest strong public company anchor",
+    "excerpt": "The February 2013 OpenStack announcement is more than an ecosystem badge. It publicly names Sean Xiang as co-founder and CEO while positioning Bloombase around enterprise cloud privacy, compliance, and data-at-rest protection.",
+    "caption": "Instead of pretending to have exact incorporation paperwork, the chronicle can use this dated release as the first hard public proof that the founder chapter was already legible in market-facing language.",
+    "sourceId": "openstack-2013",
+    "mediaLabel": "Early release card",
+    "supportLabel": "First visible company narrative",
+    "displayMode": "document",
+    "visualTitle": "OpenStack community release",
+    "visualText": "2013-02-18 · Sean Xiang is quoted as co-founder and CEO while the product is framed as the missing security layer for OpenStack storage.",
+    "quoteText": "One of the key challenges with enterprise core business applications on cloud adoption is the need to achieve data privacy and regulatory compliance."
+  },
+  {
+    "id": "vmware-2013-artifact",
+    "chapterId": "founding-bloombase",
+    "type": "founding-proof",
+    "eyebrow": "Founding proof · 2013",
+    "title": "The VMware alliance shows Bloombase entering enterprise infrastructure fast",
+    "excerpt": "The August 2013 VMware Technology Alliance announcement tightens the founding chapter because it shows Bloombase speaking directly to virtualization and cloud buyers within months of the earliest visible 2013 public trail.",
+    "caption": "Editorially, this is the right kind of founding-era artifact: concrete, dated, and structurally aligned with the long-term thesis that Bloombase was built inside trust-heavy infrastructure markets from the beginning.",
+    "sourceId": "vmware-2013",
+    "mediaLabel": "Alliance release card",
+    "supportLabel": "Early enterprise validation",
+    "displayMode": "document",
+    "visualTitle": "VMware TAP announcement",
+    "visualText": "2013-08-30 · A direct company URL ties Bloombase to VMware's alliance program and to virtualization-era data privacy concerns.",
+    "quoteText": "Data privacy tops one of CIOs' concerns over virtualization and cloud."
+  },
+  {
     "id": "vmware-2014",
     "chapterId": "enterprise-validation",
     "type": "alliance-announcement",

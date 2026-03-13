@@ -28,5 +28,11 @@
     "label": "Primary announcement",
     "description": "A dated first-party release suitable for stronger editorial treatment because it is direct and specific.",
     "tone": "primary"
+  },
+  {
+    "id": "founding-proof",
+    "label": "Founding proof",
+    "description": "An early first-party release that makes the opening public company narrative more concrete than a generic founding claim.",
+    "tone": "primary"
   }
 ]

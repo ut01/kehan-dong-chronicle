@@ -31,9 +31,11 @@
   - chapter-aware archive scoping so support clusters open filtered evidence sets in the reference timeline
   - stronger editorial geography navigation cards with chapter tone, evidence counts, and source-backed cues
   - chapter evidence matrix + open source gaps panel so sourcing strength is visible, not implied
+- founding chapter strengthened with dated 2013 release-trail treatment instead of a vague founding claim
+- richer founding-proof artifact cards added for the OpenStack and VMware 2013 releases, including direct-quote support in the artifact visual system
 
 ## Next implementation steps
-1. Strengthen the source archive further by capturing more direct primary URLs for early academic/founding details.
+1. Strengthen the source archive further by capturing more direct primary URLs for early academic details, especially anything tighter than the current profile-level CUHK / Beckman trail.
 2. Deepen the artifact system with real media slots for conference visuals, article snippets, and future scans only where source quality is strong enough.
-3. Add richer chapter-level artifact slots for the strongest early/founding chapters once source quality supports them.
+3. Add richer chapter-level artifact slots for the strongest validation chapter items (Dell / Hitachi / IBM / Azure) so the middle years feel archival, not repetitive.
 4. Consider migrating the static prototype into Astro once the content model stabilizes.

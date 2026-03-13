@@ -1372,15 +1372,19 @@
       visual.dataset.mode = artifact.displayMode || 'document';
       visual.append(make('div', 'artifact-visual-label', artifact.mediaLabel || 'Source artifact'));
 
+      const quoteText = artifact.quoteText || artifact.title;
       if ((artifact.displayMode || 'document') === 'quote') {
-        visual.append(make('div', 'artifact-visual-quote', `“${artifact.title}”`));
-        visual.append(make('div', '', artifactPrimaryLine(source)));
+        visual.append(make('div', 'artifact-visual-quote', `“${quoteText}”`));
+        visual.append(make('div', '', artifact.supportLabel || artifactPrimaryLine(source)));
         return visual;
       }
 
       const doc = make('div', 'artifact-visual-doc');
-      doc.append(make('strong', '', artifact.title));
-      doc.append(make('span', '', artifact.supportLabel || artifactPrimaryLine(source)));
+      doc.append(make('strong', '', artifact.visualTitle || artifact.title));
+      doc.append(make('span', '', artifact.visualText || artifact.supportLabel || artifactPrimaryLine(source)));
+      if (artifact.quoteText) {
+        doc.append(make('span', '', `“${artifact.quoteText}”`));
+      }
       visual.append(doc);
       return visual;
     }
