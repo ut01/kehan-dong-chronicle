@@ -1,0 +1,38 @@
+[
+  {
+    "id": "launch-academy-2018",
+    "chapterId": "research-formation",
+    "eyebrow": "Profile / expansion source",
+    "title": "Launch Academy profile ties together Ph.D., Beckman, and Canada rationale",
+    "excerpt": "The 2018 Launch Academy / Maple profile is one of the most useful public documents because it links Sean Xiang's CUHK doctorate, Beckman Laser Institute role, and the strategic case for expanding into Canada.",
+    "caption": "This functions less like decorative press coverage and more like a connective archival document between the academic chapter and later geographic expansion.",
+    "sourceId": "launch-academy"
+  },
+  {
+    "id": "vmware-2014",
+    "chapterId": "enterprise-validation",
+    "eyebrow": "Alliance milestone · 2014",
+    "title": "VMware alliance marks the start of a visible enterprise-validation run",
+    "excerpt": "The January 2014 Bloombase announcement about joining VMware's Technology Alliance Partner Program gives the middle chapter a concrete starting marker in platform interoperability and ecosystem trust.",
+    "caption": "One announcement is not the whole story, but it helps establish the cadence of repeated validation signals that follow.",
+    "sourceId": "vmware-2014"
+  },
+  {
+    "id": "nvidia-2023",
+    "chapterId": "ai-era",
+    "eyebrow": "AI infrastructure framing · 2023",
+    "title": "The NVIDIA DPU / GPU post reframes Bloombase for accelerated computing",
+    "excerpt": "Bloombase's 2023 post on rebuilding data-at-rest security with NVIDIA DPUs and GPUs is the clearest public signal that the company is trying to translate long-built security primitives into an AI-era stack.",
+    "caption": "Editorially, this is the bridge between legacy enterprise credibility and present-tense AI relevance.",
+    "sourceId": "nvidia-2023"
+  },
+  {
+    "id": "utimaco-2025",
+    "chapterId": "ai-era",
+    "eyebrow": "Primary announcement · 2025",
+    "title": "The Utimaco alliance gives the AI-era chapter a direct primary source",
+    "excerpt": "The April 2025 Bloombase announcement explicitly frames the Utimaco relationship around data security solutions for the AI era, making it a stronger anchor than generic conference visibility alone.",
+    "caption": "This is the kind of source that can justify richer future media treatment because it is direct, dated, and specific.",
+    "sourceId": "utimaco-2025"
+  }
+]

@@ -170,6 +170,60 @@
     .proof-list li {
       padding: 12px 14px; border-radius: 16px; background: rgba(25,50,79,.05); border: 1px solid rgba(25,50,79,.08); color: var(--ink); line-height: 1.6;
     }
+    .artifact-stack {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .artifact-card {
+      padding: 18px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.74));
+      border: 1px solid rgba(25,50,79,.10);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.42);
+    }
+    .artifact-eyebrow {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin-bottom: 10px;
+    }
+    .artifact-card h4 {
+      margin: 0 0 10px;
+      font-family: Georgia, serif;
+      font-size: 22px;
+      line-height: 1.3;
+      letter-spacing: -.02em;
+    }
+    .artifact-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.72;
+    }
+    .artifact-caption {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(25,50,79,.08);
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+    .artifact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      text-decoration: none;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(25,50,79,.06);
+      border: 1px solid rgba(25,50,79,.08);
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
     .chapter-sources {
       display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;
     }
@@ -551,7 +605,7 @@
       });
     }
 
-    function renderChapters(chapters, sourcesById) {
+    function renderChapters(chapters, sourcesById, artifactsByChapterId) {
       const root = document.getElementById('chapters');
       chapters.forEach((chapter) => {
         const article = make('article', 'card chapter');
@@ -574,6 +628,28 @@
           proofList.append(make('li', '', point));
         });
         article.append(proofList);
+
+        const artifacts = artifactsByChapterId.get(chapter.id) || [];
+        if (artifacts.length) {
+          const artifactStack = make('div', 'artifact-stack');
+          artifacts.forEach((artifact) => {
+            const source = sourcesById.get(artifact.sourceId);
+            const card = make('section', 'artifact-card');
+            card.append(make('div', 'artifact-eyebrow', artifact.eyebrow));
+            card.append(make('h4', '', artifact.title));
+            card.append(make('p', '', artifact.excerpt));
+            card.append(make('div', 'artifact-caption', artifact.caption));
+            if (source) {
+              const link = make('a', 'artifact-link', 'Open source artifact');
+              link.href = source.url;
+              link.target = source.url.startsWith('http') ? '_blank' : '_self';
+              if (link.target === '_blank') link.rel = 'noreferrer';
+              card.append(link);
+            }
+            artifactStack.append(card);
+          });
+          article.append(artifactStack);
+        }
 
         const sourceRow = make('div', 'chapter-sources');
         chapter.sources.forEach((sourceId) => {
@@ -839,17 +915,23 @@
     }
 
     async function init() {
-      const [chapters, locations, validationGroups, sources, timeline] = await Promise.all([
+      const [chapters, locations, validationGroups, sources, timeline, artifacts] = await Promise.all([
         loadJson('./data/chapters.json'),
         loadJson('./data/locations.json'),
         loadJson('./data/validation.json'),
         loadJson('./data/sources.json'),
-        loadJson('./data/timeline.json')
+        loadJson('./data/timeline.json'),
+        loadJson('./data/artifacts.json')
       ]);
 
       const sourcesById = new Map(sources.map((source) => [source.id, source]));
+      const artifactsByChapterId = new Map();
+      artifacts.forEach((artifact) => {
+        if (!artifactsByChapterId.has(artifact.chapterId)) artifactsByChapterId.set(artifact.chapterId, []);
+        artifactsByChapterId.get(artifact.chapterId).push(artifact);
+      });
       renderPhaseRail(chapters);
-      renderChapters(chapters, sourcesById);
+      renderChapters(chapters, sourcesById, artifactsByChapterId);
       const setActiveLocation = initializeMap(locations, chapters);
       renderValidation(validationGroups);
       renderArchive(timeline.events);
