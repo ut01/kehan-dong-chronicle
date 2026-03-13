@@ -201,6 +201,12 @@
       color: var(--muted);
       line-height: 1.72;
     }
+    .artifact-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
     .artifact-caption {
       margin-top: 12px;
       padding-top: 12px;
@@ -208,6 +214,39 @@
       color: var(--soft);
       font-size: 13px;
       line-height: 1.65;
+    }
+    .artifact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      border: 1px solid rgba(25,50,79,.08);
+      background: rgba(25,50,79,.04);
+      color: var(--accent);
+    }
+    .artifact-pill[data-tone="validation"] {
+      background: rgba(45,95,115,.09);
+      color: #214c5e;
+    }
+    .artifact-pill[data-tone="present"] {
+      background: rgba(104,92,156,.10);
+      color: #55478e;
+    }
+    .artifact-pill[data-tone="primary"] {
+      background: rgba(180,138,90,.12);
+      color: #6f532f;
+    }
+    .artifact-pill[data-tone="context"] {
+      background: rgba(25,50,79,.06);
+      color: var(--accent);
+    }
+    .artifact-pill[data-tone="evidence"] {
+      background: rgba(87,110,150,.10);
+      color: #455a84;
     }
     .artifact-link {
       display: inline-flex;
@@ -408,6 +447,72 @@
     .timeline-card[data-group="ai-era"] { border-left: 3px solid rgba(104,92,156,.45); }
     .timeline-card.hidden { display: none; }
 
+    .present-wrap { margin-top: 34px; }
+    .present-panel {
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(25,50,79,.95), rgba(38,68,94,.92));
+      color: #f5f0e7;
+      border: 1px solid rgba(255,255,255,.08);
+      overflow: hidden;
+      position: relative;
+    }
+    .present-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(180,138,90,.20), transparent 24%),
+        radial-gradient(circle at 85% 25%, rgba(125,159,193,.16), transparent 20%);
+      pointer-events: none;
+    }
+    .present-panel > * { position: relative; z-index: 1; }
+    .present-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr);
+      gap: 22px;
+      align-items: start;
+    }
+    .present-panel .section-label,
+    .present-panel h2,
+    .present-panel .intro-copy,
+    .present-panel p,
+    .present-panel li { color: inherit; }
+    .signal-grid, .next-moves {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .signal-card, .next-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(10px);
+    }
+    .signal-card strong, .next-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 13px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(245,240,231,.86);
+    }
+    .present-sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .present-source {
+      text-decoration: none;
+      padding: 9px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.12);
+      color: #f5f0e7;
+      font-size: 12px;
+    }
+
     .sources-wrap { margin-top: 34px; }
     .sources-list { display: grid; gap: 12px; margin-top: 18px; }
     .source-item {
@@ -424,7 +529,7 @@
     .footer-note { margin-top: 18px; color: var(--soft); font-size: 13px; line-height: 1.7; }
 
     @media (max-width: 1080px) {
-      .hero, .overview, .main-grid, .archive-header { grid-template-columns: 1fr; }
+      .hero, .overview, .main-grid, .archive-header, .present-grid { grid-template-columns: 1fr; }
       .sticky-stack { position: static; }
       .phase-rail ol { grid-template-columns: repeat(3, minmax(0,1fr)); }
       .archive-legend { justify-content: flex-start; }
@@ -564,6 +669,13 @@
       </article>
     </section>
 
+    <section class="present-wrap">
+      <article class="card present-panel">
+        <div class="section-label">Present direction</div>
+        <div class="present-grid" id="presentDirection"></div>
+      </article>
+    </section>
+
     <section class="sources-wrap">
       <article class="card sources-panel">
         <div class="section-label">Archive / sources</div>
@@ -605,7 +717,7 @@
       });
     }
 
-    function renderChapters(chapters, sourcesById, artifactsByChapterId) {
+    function renderChapters(chapters, sourcesById, artifactsByChapterId, taxonomyById) {
       const root = document.getElementById('chapters');
       chapters.forEach((chapter) => {
         const article = make('article', 'card chapter');
@@ -634,10 +746,26 @@
           const artifactStack = make('div', 'artifact-stack');
           artifacts.forEach((artifact) => {
             const source = sourcesById.get(artifact.sourceId);
+            const taxonomy = taxonomyById.get(artifact.type);
             const card = make('section', 'artifact-card');
             card.append(make('div', 'artifact-eyebrow', artifact.eyebrow));
             card.append(make('h4', '', artifact.title));
             card.append(make('p', '', artifact.excerpt));
+
+            if (taxonomy || source) {
+              const meta = make('div', 'artifact-meta');
+              if (taxonomy) {
+                const pill = make('div', 'artifact-pill', taxonomy.label);
+                pill.dataset.tone = taxonomy.tone || 'context';
+                pill.title = taxonomy.description || taxonomy.label;
+                meta.append(pill);
+              }
+              if (source) {
+                meta.append(make('div', 'artifact-pill', source.label));
+              }
+              card.append(meta);
+            }
+
             card.append(make('div', 'artifact-caption', artifact.caption));
             if (source) {
               const link = make('a', 'artifact-link', 'Open source artifact');
@@ -677,6 +805,47 @@
         section.append(items);
         root.append(section);
       });
+    }
+
+    function renderPresentDirection(presentDirection, sourcesById) {
+      const root = document.getElementById('presentDirection');
+      const left = make('div');
+      left.append(make('h2', '', presentDirection.title));
+      left.append(make('p', 'intro-copy', presentDirection.summary));
+
+      const signals = make('div', 'signal-grid');
+      presentDirection.signals.forEach((signal) => {
+        const card = make('section', 'signal-card');
+        card.append(make('strong', '', signal.label));
+        card.append(make('p', '', signal.text));
+        signals.append(card);
+      });
+      left.append(signals);
+
+      const sourcesRow = make('div', 'present-sources');
+      (presentDirection.sourceIds || []).forEach((sourceId) => {
+        const source = sourcesById.get(sourceId);
+        if (!source) return;
+        const link = make('a', 'present-source', source.label);
+        link.href = source.url;
+        link.target = source.url.startsWith('http') ? '_blank' : '_self';
+        if (link.target === '_blank') link.rel = 'noreferrer';
+        sourcesRow.append(link);
+      });
+      left.append(sourcesRow);
+
+      const right = make('div');
+      right.append(make('div', 'section-label', 'Editorial next moves'));
+      const nextMoves = make('div', 'next-moves');
+      presentDirection.nextMoves.forEach((move, index) => {
+        const card = make('section', 'next-card');
+        card.append(make('strong', '', `Move 0${index + 1}`));
+        card.append(make('p', '', move));
+        nextMoves.append(card);
+      });
+      right.append(nextMoves);
+
+      root.append(left, right);
     }
 
     function renderSources(sources) {
@@ -877,8 +1046,15 @@
 
         if (!map.loaded()) return;
 
-        if (locationId === 'global-ai') {
-          map.flyTo({ center: [10, 22], zoom: 1.15, speed: 0.55, essential: true });
+        const camera = current?.camera;
+        if (camera?.center && Number.isFinite(camera.zoom)) {
+          map.flyTo({
+            center: camera.center,
+            zoom: camera.zoom,
+            speed: locationId === 'global-ai' ? 0.42 : 0.5,
+            curve: 1.2,
+            essential: true
+          });
           return;
         }
 
@@ -915,26 +1091,30 @@
     }
 
     async function init() {
-      const [chapters, locations, validationGroups, sources, timeline, artifacts] = await Promise.all([
+      const [chapters, locations, validationGroups, sources, timeline, artifacts, artifactTaxonomy, presentDirection] = await Promise.all([
         loadJson('./data/chapters.json'),
         loadJson('./data/locations.json'),
         loadJson('./data/validation.json'),
         loadJson('./data/sources.json'),
         loadJson('./data/timeline.json'),
-        loadJson('./data/artifacts.json')
+        loadJson('./data/artifacts.json'),
+        loadJson('./data/artifact-taxonomy.json'),
+        loadJson('./data/present-direction.json')
       ]);
 
       const sourcesById = new Map(sources.map((source) => [source.id, source]));
+      const taxonomyById = new Map(artifactTaxonomy.map((entry) => [entry.id, entry]));
       const artifactsByChapterId = new Map();
       artifacts.forEach((artifact) => {
         if (!artifactsByChapterId.has(artifact.chapterId)) artifactsByChapterId.set(artifact.chapterId, []);
         artifactsByChapterId.get(artifact.chapterId).push(artifact);
       });
       renderPhaseRail(chapters);
-      renderChapters(chapters, sourcesById, artifactsByChapterId);
+      renderChapters(chapters, sourcesById, artifactsByChapterId, taxonomyById);
       const setActiveLocation = initializeMap(locations, chapters);
       renderValidation(validationGroups);
       renderArchive(timeline.events);
+      renderPresentDirection(presentDirection, sourcesById);
       renderSources(sources);
       activateScrollSync(chapters, setActiveLocation);
     }

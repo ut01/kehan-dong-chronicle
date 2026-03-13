@@ -1,0 +1,32 @@
+[
+  {
+    "id": "profile-source",
+    "label": "Profile source",
+    "description": "Third-party profile or expansion story that connects multiple chapters of the biography.",
+    "tone": "context"
+  },
+  {
+    "id": "alliance-announcement",
+    "label": "Alliance announcement",
+    "description": "Direct company announcement marking interoperability, partnership, or ecosystem validation.",
+    "tone": "validation"
+  },
+  {
+    "id": "platform-proof",
+    "label": "Platform proof",
+    "description": "A launch, listing, or integration that shows distribution or infrastructure relevance.",
+    "tone": "evidence"
+  },
+  {
+    "id": "ai-positioning",
+    "label": "AI positioning",
+    "description": "A source that reframes Bloombase for accelerated computing, data pipelines, or AI-era security.",
+    "tone": "present"
+  },
+  {
+    "id": "primary-announcement",
+    "label": "Primary announcement",
+    "description": "A dated first-party release suitable for stronger editorial treatment because it is direct and specific.",
+    "tone": "primary"
+  }
+]
