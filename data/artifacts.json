@@ -155,5 +155,81 @@
     "displayMode": "document",
     "visualTitle": "Microsoft Azure Marketplace listing",
     "visualText": "2019-01-22 - Bloombase appears in a public-cloud marketplace, extending the validation arc beyond classic enterprise data-center partnerships."
+  },
+  {
+    "id": "geography-footprint-2018",
+    "chapterId": "geographic-expansion",
+    "type": "geography-proof",
+    "eyebrow": "Geography proof - 2018 onward",
+    "title": "Canada expansion lands inside a real multi-office footprint, not a symbolic map pin",
+    "excerpt": "The strongest version of the geography chapter is not that Bloombase \"went global,\" but that Vancouver becomes legible alongside Redwood City, Hong Kong, and Frankfurt on a direct company offices page while the Launch Academy profile explains why Canada mattered.",
+    "caption": "This is the right editorial treatment for the map chapter: one source explains the strategic why, another proves the operating footprint. Together they let the geography module read like evidence instead of atmosphere.",
+    "sourceId": "bloombase-offices",
+    "sourceIds": [
+      "launch-academy",
+      "bloombase-offices"
+    ],
+    "mediaLabel": "Office-footprint ledger",
+    "supportLabel": "Expansion logic + operating footprint",
+    "displayMode": "footprint",
+    "visualTitle": "Bloombase operating geography",
+    "visualText": "Redwood City remains the company spine while Vancouver becomes a source-backed expansion chapter connected to talent, cryptography, and ecosystem positioning.",
+    "footprintItems": [
+      {
+        "label": "Redwood City",
+        "detail": "1300 Island Drive - Silicon Valley operating base",
+        "tone": "anchor"
+      },
+      {
+        "label": "Vancouver",
+        "detail": "505 Burrard Street - Canada expansion chapter",
+        "tone": "expansion"
+      },
+      {
+        "label": "Hong Kong",
+        "detail": "Science Park presence keeps the Asia-Pacific thread visible",
+        "tone": "formation"
+      },
+      {
+        "label": "Frankfurt",
+        "detail": "EMEA office shows the footprint widening beyond North America",
+        "tone": "network"
+      }
+    ]
+  },
+  {
+    "id": "ai-era-signal-matrix",
+    "chapterId": "ai-era",
+    "type": "ecosystem-visibility",
+    "eyebrow": "AI-era signal matrix - 2023-2025",
+    "title": "The recent chapter reads as a stacked signal set: accelerated computing, public visibility, then alliance execution",
+    "excerpt": "Instead of treating the AI era like one more press-release card, the chronicle can show the sequence: a 2023 NVIDIA reframing, a still-active public news surface, and a 2025 Utimaco alliance that explicitly names the AI era.",
+    "caption": "That pattern matters because it keeps the latest section from feeling like nostalgia dressed up as AI. The chapter has a real through-line from technical argument to ecosystem presence to named alliance.",
+    "sourceId": "nvidia-2023",
+    "sourceIds": [
+      "nvidia-2023",
+      "bloombase-news-index",
+      "utimaco-2025"
+    ],
+    "mediaLabel": "AI-era signal board",
+    "supportLabel": "Present-tense relevance sequence",
+    "displayMode": "signal-grid",
+    "signalItems": [
+      {
+        "label": "2023",
+        "title": "NVIDIA DPU / GPU reframing",
+        "text": "Bloombase explicitly translates data-at-rest security into accelerated-computing language."
+      },
+      {
+        "label": "Live archive",
+        "title": "Public news surface still active",
+        "text": "The Bloombase news index keeps the release trail visible instead of forcing the page to rely on vague \"recently active\" claims."
+      },
+      {
+        "label": "2025",
+        "title": "Utimaco alliance for the AI era",
+        "text": "A direct alliance announcement names AI-era data security as the current market frame."
+      }
+    ]
   }
 ]

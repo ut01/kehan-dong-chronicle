@@ -288,6 +288,60 @@
       gap: 8px;
       margin-top: 12px;
     }
+    .artifact-signal-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .artifact-signal {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(247,243,236,.12);
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+    .artifact-signal strong, .artifact-footprint-item strong {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(247,243,236,.72);
+    }
+    .artifact-signal span {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      line-height: 1.3;
+      letter-spacing: -.02em;
+    }
+    .artifact-signal p, .artifact-footprint-item p {
+      margin: 0;
+      color: rgba(247,243,236,.82);
+      line-height: 1.55;
+      font-size: 13px;
+    }
+    .artifact-footprint {
+      display: grid;
+      gap: 10px;
+    }
+    .artifact-footprint-item {
+      display: grid;
+      grid-template-columns: minmax(110px, 140px) minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 12px 0;
+      border-top: 1px solid rgba(247,243,236,.12);
+    }
+    .artifact-footprint-item:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+    .artifact-source-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
     .artifact-caption {
       margin-top: 12px;
       padding-top: 12px;
@@ -343,6 +397,9 @@
       font-size: 12px;
       letter-spacing: .08em;
       text-transform: uppercase;
+    }
+    .artifact-link.secondary {
+      background: rgba(255,255,255,.72);
     }
     .chapter-sources {
       display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;
@@ -1393,27 +1450,62 @@
       });
     }
 
-    function artifactPrimaryLine(source) {
+    function artifactPrimaryLine(sourceOrSources) {
+      const source = Array.isArray(sourceOrSources) ? sourceOrSources[0] : sourceOrSources;
       if (!source) return 'Working artifact context';
       const bits = [source.publisherLabel, source.evidenceLabel, source.directnessLabel].filter(Boolean);
       return bits.join(' · ');
     }
 
-    function renderArtifactVisual(artifact, source) {
+    function resolveArtifactSources(artifact, sourcesById) {
+      const ids = [...new Set([...(artifact.sourceIds || []), artifact.sourceId].filter(Boolean))];
+      return ids.map((sourceId) => sourcesById.get(sourceId)).filter(Boolean);
+    }
+
+    function renderArtifactVisual(artifact, sources) {
       const visual = make('div', 'artifact-visual');
       visual.dataset.mode = artifact.displayMode || 'document';
       visual.append(make('div', 'artifact-visual-label', artifact.mediaLabel || 'Source artifact'));
 
+      const displayMode = artifact.displayMode || 'document';
       const quoteText = artifact.quoteText || artifact.title;
-      if ((artifact.displayMode || 'document') === 'quote') {
+      if (displayMode === 'quote') {
         visual.append(make('div', 'artifact-visual-quote', `“${quoteText}”`));
-        visual.append(make('div', '', artifact.supportLabel || artifactPrimaryLine(source)));
+        visual.append(make('div', '', artifact.supportLabel || artifactPrimaryLine(sources)));
         return visual;
       }
 
       const doc = make('div', 'artifact-visual-doc');
       doc.append(make('strong', '', artifact.visualTitle || artifact.title));
-      doc.append(make('span', '', artifact.visualText || artifact.supportLabel || artifactPrimaryLine(source)));
+      doc.append(make('span', '', artifact.visualText || artifact.supportLabel || artifactPrimaryLine(sources)));
+
+      if (displayMode === 'signal-grid') {
+        visual.append(doc);
+        const grid = make('div', 'artifact-signal-grid');
+        (artifact.signalItems || []).forEach((item) => {
+          const cell = make('div', 'artifact-signal');
+          cell.append(make('strong', '', item.label));
+          cell.append(make('span', '', item.title));
+          cell.append(make('p', '', item.text));
+          grid.append(cell);
+        });
+        visual.append(grid);
+        return visual;
+      }
+
+      if (displayMode === 'footprint') {
+        visual.append(doc);
+        const footprint = make('div', 'artifact-footprint');
+        (artifact.footprintItems || []).forEach((item) => {
+          const row = make('div', 'artifact-footprint-item');
+          row.append(make('strong', '', item.label));
+          row.append(make('p', '', item.detail));
+          footprint.append(row);
+        });
+        visual.append(footprint);
+        return visual;
+      }
+
       if (artifact.quoteText) {
         doc.append(make('span', '', `“${artifact.quoteText}”`));
       }
@@ -1468,15 +1560,15 @@
         if (artifacts.length) {
           const artifactStack = make('div', 'artifact-stack');
           artifacts.forEach((artifact) => {
-            const source = sourcesById.get(artifact.sourceId);
+            const artifactSources = resolveArtifactSources(artifact, sourcesById);
             const taxonomy = taxonomyById.get(artifact.type);
             const card = make('section', 'artifact-card');
-            card.append(renderArtifactVisual(artifact, source));
+            card.append(renderArtifactVisual(artifact, artifactSources));
             card.append(make('div', 'artifact-eyebrow', artifact.eyebrow));
             card.append(make('h4', '', artifact.title));
             card.append(make('p', '', artifact.excerpt));
 
-            if (taxonomy || source) {
+            if (taxonomy || artifactSources.length) {
               const meta = make('div', 'artifact-meta');
               if (taxonomy) {
                 const pill = make('div', 'artifact-pill', taxonomy.label);
@@ -1484,19 +1576,24 @@
                 pill.title = taxonomy.description || taxonomy.label;
                 meta.append(pill);
               }
-              if (source) {
+              artifactSources.forEach((source) => {
                 meta.append(make('div', 'artifact-pill', source.label));
-              }
+              });
               card.append(meta);
             }
 
             card.append(make('div', 'artifact-caption', artifact.caption));
-            if (source) {
-              const link = make('a', 'artifact-link', 'Open source artifact');
-              link.href = source.url;
-              link.target = source.url.startsWith('http') ? '_blank' : '_self';
-              if (link.target === '_blank') link.rel = 'noreferrer';
-              card.append(link);
+            if (artifactSources.length) {
+              const linkRow = make('div', 'artifact-source-links');
+              artifactSources.forEach((source, index) => {
+                const link = make('a', `artifact-link${index > 0 ? ' secondary' : ''}`, artifactSources.length === 1 ? 'Open source artifact' : `View source ${index + 1}`);
+                link.href = source.url;
+                link.target = source.url.startsWith('http') ? '_blank' : '_self';
+                if (link.target === '_blank') link.rel = 'noreferrer';
+                link.title = source.label;
+                linkRow.append(link);
+              });
+              card.append(linkRow);
             }
             artifactStack.append(card);
           });
