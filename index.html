@@ -1565,7 +1565,7 @@
         <div class="archive-header">
           <div>
             <h2>A denser chronology for the readers who want the full record</h2>
-            <p class="archive-note">
+            <p class="archive-note" id="archiveNote">
               The main chapters are deliberately selective. This archive view exposes the deeper milestone layer from the existing timeline dataset so the site can support both skim mode and research mode.
             </p>
           </div>
@@ -1855,7 +1855,7 @@
             const link = make('button', 'archive-cluster-link');
             link.type = 'button';
             link.dataset.archiveTarget = event.id;
-            link.innerHTML = `<span>${formatEventDate(event.start_date)}</span><strong>${event.text.headline}</strong>`;
+            link.innerHTML = `<span>${getEventDateLabel(event)}</span><strong>${event.text.headline}</strong>`;
             link.addEventListener('click', () => openArchiveScope?.(chapter.id, event.id));
             linkRow.append(link);
           });
@@ -2390,7 +2390,12 @@
       return 'validation';
     }
 
+    function hasStructuredStartDate(event) {
+      return Boolean(event?.start_date?.year);
+    }
+
     function formatEventDate(startDate) {
+      if (!startDate?.year) return 'Undated';
       const year = startDate.year;
       const month = startDate.month ? String(startDate.month).padStart(2, '0') : null;
       const day = startDate.day ? String(startDate.day).padStart(2, '0') : null;
@@ -2399,6 +2404,32 @@
       return `${year}`;
     }
 
+    function getEventDateLabel(event) {
+      return event.dateLabel || formatEventDate(event.start_date);
+    }
+
+    function eventSortKey(event) {
+      if (hasStructuredStartDate(event)) {
+        const year = String(event.start_date.year).padStart(4, '0');
+        const month = event.start_date.month ? String(event.start_date.month).padStart(2, '0') : '00';
+        const day = event.start_date.day ? String(event.start_date.day).padStart(2, '0') : '00';
+        return `0-${year}-${month}-${day}-${event.id || event.text?.headline || ''}`;
+      }
+
+      const bucketOrder = {
+        formation: '0',
+        research: '1',
+        founding: '2',
+        validation: '3',
+        'ai-era': '4'
+      };
+      const bucket = bucketOrder[event.sortBucket] || '9';
+      return `1-${bucket}-${event.id || event.text?.headline || ''}`;
+    }
+
+    function eventYearBucket(event) {
+      return hasStructuredStartDate(event) ? String(event.start_date.year) : 'Undated / chronology in progress';
+    }
 
     let highlightedArchiveCard = null;
 
@@ -2432,7 +2463,7 @@
         map.get(event.chapterId).push(event);
       });
       map.forEach((chapterEvents) => {
-        chapterEvents.sort((a, b) => formatEventDate(a.start_date).localeCompare(formatEventDate(b.start_date)));
+        chapterEvents.sort((a, b) => eventSortKey(a).localeCompare(eventSortKey(b)));
       });
       return map;
     }
@@ -2443,6 +2474,7 @@
       const sourceFilterRoot = document.getElementById('archiveSourceFilters');
       const scopeChip = document.getElementById('archiveScopeChip');
       const scopeClear = document.getElementById('archiveScopeClear');
+      const archiveNote = document.getElementById('archiveNote');
       const groups = [
         ['all', 'All'],
         ['formation', 'Formation'],
@@ -2469,6 +2501,14 @@
         scopeChip.textContent = chapter ? `${chapter.phase} · ${chapter.range}` : '';
         scopeChip.classList.toggle('active', Boolean(chapter));
         scopeClear.classList.toggle('active', Boolean(chapter));
+
+        if (archiveNote) {
+          const scopedEvents = events.filter((event) => filters.chapterId === 'all' || event.chapterId === filters.chapterId);
+          const undatedCount = scopedEvents.filter((event) => !hasStructuredStartDate(event)).length;
+          archiveNote.textContent = filters.chapterId === 'all'
+            ? `The main chapters are deliberately selective. This archive view exposes the deeper milestone layer from the existing timeline dataset so the site can support both skim mode and research mode. ${undatedCount} early milestone${undatedCount === 1 ? ' remains' : 's remain'} explicitly undated until stronger public proof exists.`
+            : `Scoped to ${chapter?.phase || 'this chapter'} so the archive behaves like supporting evidence, not a disconnected list. ${undatedCount} milestone${undatedCount === 1 ? ' in this chapter is' : 's in this chapter are'} still intentionally undated.`;
+        }
       }
 
       function applyArchiveFilters() {
@@ -2526,13 +2566,17 @@
       });
 
       const byYear = new Map();
-      events.forEach((event) => {
-        const year = String(event.start_date.year);
+      [...events].sort((a, b) => eventSortKey(a).localeCompare(eventSortKey(b))).forEach((event) => {
+        const year = eventYearBucket(event);
         if (!byYear.has(year)) byYear.set(year, []);
         byYear.get(year).push(event);
       });
 
-      Array.from(byYear.entries()).sort((a, b) => Number(a[0]) - Number(b[0])).forEach(([year, items]) => {
+      Array.from(byYear.entries()).sort((a, b) => {
+        if (a[0] === 'Undated / chronology in progress') return 1;
+        if (b[0] === 'Undated / chronology in progress') return -1;
+        return Number(a[0]) - Number(b[0]);
+      }).forEach(([year, items]) => {
         const row = make('section', 'timeline-event');
         row.append(make('div', 'timeline-year', year));
         const stack = make('div');
@@ -2556,8 +2600,9 @@
           }
 
           const meta = make('div', 'timeline-meta');
-          meta.append(make('span', '', formatEventDate(event.start_date)));
+          meta.append(make('span', '', getEventDateLabel(event)));
           meta.append(make('span', '', group.replace('-', ' ')));
+          if (!hasStructuredStartDate(event)) meta.append(make('span', '', 'Chronology still being tightened'));
           if (primarySource?.publisherLabel) meta.append(make('span', '', primarySource.publisherLabel));
           if (primarySource?.evidenceLabel) meta.append(make('span', '', primarySource.evidenceLabel));
           card.append(meta);

@@ -1,17 +1,14 @@
-{
+﻿{
   "title": {
     "text": {
-      "headline": "Sean Xiang \u2014 Founder Chronicle",
+      "headline": "Sean Xiang - Founder Chronicle",
       "text": "A simple MVP timeline of study, research, company building, partnerships, and AI-era milestones."
     }
   },
   "events": [
     {
-      "start_date": {
-        "year": "16"
-      },
       "text": {
-        "headline": "Age 16 \u2014 USTC",
+        "headline": "Age 16 - USTC",
         "text": "Entered the University of Science and Technology of China (working narrative; source verification pending)."
       },
       "sourceIds": [
@@ -19,12 +16,12 @@
         "timeline-v2"
       ],
       "id": "age-16-ustc",
-      "chapterId": "early-acceleration"
+      "chapterId": "early-acceleration",
+      "dateLabel": "Undated - claim still being tightened",
+      "undated": true,
+      "sortBucket": "formation"
     },
     {
-      "start_date": {
-        "year": "1990"
-      },
       "text": {
         "headline": "Early Technical Formation",
         "text": "Built the foundation for a long technical trajectory."
@@ -34,12 +31,12 @@
         "timeline-v2"
       ],
       "id": "early-technical-formation",
-      "chapterId": "early-acceleration"
+      "chapterId": "early-acceleration",
+      "dateLabel": "Undated - opening frame",
+      "undated": true,
+      "sortBucket": "formation"
     },
     {
-      "start_date": {
-        "year": "2000"
-      },
       "text": {
         "headline": "CUHK PhD",
         "text": "Advanced training in Electrical and Electronic Engineering at The Chinese University of Hong Kong."
@@ -49,12 +46,12 @@
         "dossier"
       ],
       "id": "cuhk-phd",
-      "chapterId": "research-formation"
+      "chapterId": "research-formation",
+      "dateLabel": "Undated graduate-era anchor",
+      "undated": true,
+      "sortBucket": "research"
     },
     {
-      "start_date": {
-        "year": "2000"
-      },
       "text": {
         "headline": "Beckman Laser Institute / UC Irvine",
         "text": "Research chapter in California before the founder arc."
@@ -64,12 +61,12 @@
         "dossier"
       ],
       "id": "beckman-uc-irvine",
-      "chapterId": "california-transition"
+      "chapterId": "california-transition",
+      "dateLabel": "Undated California bridge",
+      "undated": true,
+      "sortBucket": "research"
     },
     {
-      "start_date": {
-        "year": "2000"
-      },
       "text": {
         "headline": "Bloombase founding chapter becomes publicly visible",
         "text": "The exact founding-day record remains thin, but direct Bloombase company pages and the 2013 OpenStack / EMC / VMware release trail make the earliest public company narrative materially stronger."
@@ -82,7 +79,10 @@
         "timeline-v2"
       ],
       "id": "bloombase-founded",
-      "chapterId": "founding-bloombase"
+      "chapterId": "founding-bloombase",
+      "dateLabel": "Pre-2013 public company frame",
+      "undated": true,
+      "sortBucket": "founding"
     },
     {
       "start_date": {
@@ -354,3 +354,4 @@
     }
   ]
 }
+
