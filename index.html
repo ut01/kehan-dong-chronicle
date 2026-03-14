@@ -1520,6 +1520,16 @@
       border-radius: 20px;
       border: 1px solid rgba(25,50,79,.08);
       background: rgba(255,255,255,.7);
+      transition: .18s ease;
+    }
+    .public-record-entry.is-dim {
+      opacity: .45;
+      transform: scale(.992);
+    }
+    .public-record-entry.is-focused {
+      border-color: rgba(25,50,79,.18);
+      box-shadow: 0 14px 28px rgba(31,39,50,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(246,243,237,.82));
     }
     .public-record-entry[data-tone="primary"] {
       border-color: rgba(45,95,115,.18);
@@ -2963,69 +2973,105 @@
         });
       });
 
+      window.addEventListener('chronicle:focus-chapter', (event) => {
+        const chapterId = event.detail?.chapterId;
+        if (!chapterId || !chaptersById.has(chapterId)) return;
+        filters.chapter = chapterId;
+        syncFilterButtons();
+        draw();
+        if (event.detail?.scrollSources) {
+          document.getElementById('sourceRoadmapWrap')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+
       draw();
     }
 
     function renderPublicRecordLedger(groups, chaptersById, sourcesById) {
       const root = document.getElementById('publicRecordLedger');
       if (!root) return;
-      root.innerHTML = '';
+      let focusedChapterId = null;
 
-      groups.forEach((group) => {
-        const card = make('article', 'public-record-card');
-        const head = make('div', 'public-record-head');
-        const copy = make('div');
-        copy.append(make('h3', '', group.title));
-        copy.append(make('p', '', group.summary));
-        head.append(copy);
+      function draw() {
+        root.innerHTML = '';
 
-        const stats = make('div', 'public-record-stats');
-        (group.stats || []).forEach((stat) => {
-          const statCard = make('div', 'public-record-stat');
-          statCard.append(make('strong', '', stat.value));
-          statCard.append(make('span', '', stat.label));
-          stats.append(statCard);
+        groups.forEach((group) => {
+          const groupEntries = focusedChapterId
+            ? (group.entries || []).filter((entry) => entry.chapterId === focusedChapterId)
+            : (group.entries || []);
+          if (!groupEntries.length) return;
+
+          const card = make('article', 'public-record-card');
+          const head = make('div', 'public-record-head');
+          const copy = make('div');
+          copy.append(make('h3', '', group.title));
+          const summaryText = focusedChapterId
+            ? `${group.summary} Focused to ${chaptersById.get(focusedChapterId)?.phase || 'this chapter'} so the ledger reads like supporting proof, not a detached bundle.`
+            : group.summary;
+          copy.append(make('p', '', summaryText));
+          head.append(copy);
+
+          const stats = make('div', 'public-record-stats');
+          (group.stats || []).forEach((stat) => {
+            const statCard = make('div', 'public-record-stat');
+            statCard.append(make('strong', '', stat.value));
+            statCard.append(make('span', '', stat.label));
+            stats.append(statCard);
+          });
+          head.append(stats);
+          card.append(head);
+
+          const entries = make('div', 'public-record-entries');
+          groupEntries.forEach((entry) => {
+            const chapter = chaptersById.get(entry.chapterId);
+            const source = sourcesById.get(entry.sourceId);
+            const entryCard = make('article', 'public-record-entry');
+            entryCard.dataset.tone = entry.tone || sourceSupportTone(source || {});
+            entryCard.classList.toggle('is-focused', Boolean(focusedChapterId && entry.chapterId === focusedChapterId));
+
+            const topline = make('div', 'public-record-entry-topline');
+            topline.append(make('span', '', entry.dateLabel));
+            if (chapter) topline.append(make('span', '', `${chapter.phase} · ${chapter.range}`));
+            if (source) topline.append(make('span', '', source.publisherLabel || source.categoryLabel || 'Source'));
+            entryCard.append(topline);
+
+            entryCard.append(make('h4', '', entry.title));
+            entryCard.append(make('p', '', entry.summary));
+
+            const actions = make('div', 'public-record-actions');
+            const sourceLink = make('a', 'public-record-action primary', 'Open source');
+            sourceLink.href = entry.url;
+            sourceLink.target = entry.url.startsWith('http') ? '_blank' : '_self';
+            if (sourceLink.target === '_blank') sourceLink.rel = 'noreferrer';
+            actions.append(sourceLink);
+
+            if (chapter) {
+              const chapterButton = make('button', 'public-record-action', `Jump to ${chapter.phase}`);
+              chapterButton.type = 'button';
+              chapterButton.addEventListener('click', () => announceChapterFocus(chapter.id, { scrollSources: true }));
+              actions.append(chapterButton);
+            }
+
+            entryCard.append(actions);
+            entries.append(entryCard);
+          });
+
+          card.append(entries);
+          root.append(card);
         });
-        head.append(stats);
-        card.append(head);
+      }
 
-        const entries = make('div', 'public-record-entries');
-        (group.entries || []).forEach((entry) => {
-          const chapter = chaptersById.get(entry.chapterId);
-          const source = sourcesById.get(entry.sourceId);
-          const entryCard = make('article', 'public-record-entry');
-          entryCard.dataset.tone = entry.tone || sourceSupportTone(source || {});
-
-          const topline = make('div', 'public-record-entry-topline');
-          topline.append(make('span', '', entry.dateLabel));
-          if (chapter) topline.append(make('span', '', `${chapter.phase} · ${chapter.range}`));
-          if (source) topline.append(make('span', '', source.publisherLabel || source.categoryLabel || 'Source'));
-          entryCard.append(topline);
-
-          entryCard.append(make('h4', '', entry.title));
-          entryCard.append(make('p', '', entry.summary));
-
-          const actions = make('div', 'public-record-actions');
-          const sourceLink = make('a', 'public-record-action primary', 'Open source');
-          sourceLink.href = entry.url;
-          sourceLink.target = entry.url.startsWith('http') ? '_blank' : '_self';
-          if (sourceLink.target === '_blank') sourceLink.rel = 'noreferrer';
-          actions.append(sourceLink);
-
-          if (chapter) {
-            const chapterButton = make('button', 'public-record-action', `Jump to ${chapter.phase}`);
-            chapterButton.type = 'button';
-            chapterButton.addEventListener('click', () => announceChapterFocus(chapter.id, { scrollSources: true }));
-            actions.append(chapterButton);
-          }
-
-          entryCard.append(actions);
-          entries.append(entryCard);
-        });
-
-        card.append(entries);
-        root.append(card);
+      window.addEventListener('chronicle:focus-chapter', (event) => {
+        const chapterId = event.detail?.chapterId;
+        if (!chapterId || !chaptersById.has(chapterId)) return;
+        focusedChapterId = chapterId;
+        draw();
+        if (event.detail?.scrollSources) {
+          document.getElementById('publicRecordLedger')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
+
+      draw();
     }
 
     function sourceSupportTone(source) {
