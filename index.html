@@ -148,6 +148,109 @@
     .intro-copy { color: var(--muted); line-height: 1.8; margin: 0; }
     .overview-notes ul { margin: 0; padding-left: 20px; color: var(--muted); line-height: 1.8; }
 
+    .ledger-wrap { margin: 0 0 34px; }
+    .ledger-panel { padding: 28px; }
+    .ledger-intro {
+      max-width: 74ch;
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 0 0 22px;
+    }
+    .ledger-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .ledger-card {
+      display: grid;
+      gap: 14px;
+      padding: 20px;
+      border-radius: 24px;
+      border: 1px solid rgba(25,50,79,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(246,243,237,.72));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.45);
+    }
+    .ledger-card[data-tone="ready"] { border-color: rgba(70,127,116,.18); }
+    .ledger-card[data-tone="primary"] { border-color: rgba(45,95,115,.18); }
+    .ledger-card[data-tone="context"] { border-color: rgba(180,138,90,.24); }
+    .ledger-card[data-tone="working"] { border-color: rgba(104,92,156,.16); }
+    .ledger-topline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .ledger-card h3 {
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: 24px;
+      line-height: 1.24;
+      letter-spacing: -.02em;
+    }
+    .ledger-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.72;
+    }
+    .ledger-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .ledger-metric {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(25,50,79,.08);
+    }
+    .ledger-metric strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--soft);
+    }
+    .ledger-metric span {
+      display: block;
+      color: var(--ink);
+      line-height: 1.58;
+      font-size: 13px;
+    }
+    .ledger-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .ledger-action {
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      text-decoration: none;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(25,50,79,.06);
+      border: 1px solid rgba(25,50,79,.08);
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .ledger-action.primary {
+      background: var(--accent);
+      color: #f6f1e7;
+    }
+    .ledger-gap {
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.66);
+      border: 1px dashed rgba(25,50,79,.12);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
     .main-grid {
       display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(300px, .98fr); gap: 24px; align-items: start;
     }
@@ -1708,7 +1811,7 @@
     .footer-note { margin-top: 18px; color: var(--soft); font-size: 13px; line-height: 1.7; }
 
     @media (max-width: 1080px) {
-      .hero, .overview, .main-grid, .archive-header, .present-grid, .evidence-audit, .source-explorer-header, .exhibit-grid { grid-template-columns: 1fr; }
+      .hero, .overview, .main-grid, .archive-header, .present-grid, .evidence-audit, .source-explorer-header, .exhibit-grid, .ledger-grid { grid-template-columns: 1fr; }
       .sticky-stack { position: static; }
       .phase-rail ol { grid-template-columns: repeat(3, minmax(0,1fr)); }
       .archive-controls { justify-items: start; }
@@ -1723,7 +1826,7 @@
       .chapter { padding-left: 28px; }
       .chapter::before { left: 12px; }
       .thesis-grid { grid-template-columns: 1fr; }
-      .evidence-strip, .source-summary, .source-dossier-grid { grid-template-columns: 1fr; }
+      .evidence-strip, .source-summary, .source-dossier-grid, .ledger-metrics { grid-template-columns: 1fr; }
       .source-item { grid-template-columns: 1fr; }
       .source-support-row, .source-filter-group, .source-active-state { align-items: flex-start; }
       .archive-timeline::before { left: 24px; }
@@ -1811,6 +1914,17 @@
       </aside>
     </section>
 
+    <section class="ledger-wrap">
+      <article class="card ledger-panel">
+        <div class="section-label">Evidence ledger</div>
+        <h2>The source posture of each chapter, before the reader enters the full chronology</h2>
+        <p class="ledger-intro">
+          This adds a premium middle layer between the thesis and the long-form narrative: each chapter now has a visible evidence posture, archive density, and capture backlog. It keeps the chronicle honest while making the information architecture feel curated instead of improvised.
+        </p>
+        <div class="ledger-grid" id="chapterLedger"></div>
+      </article>
+    </section>
+
     <section class="main-grid">
       <div class="chapters" id="chapters"></div>
 
@@ -1886,7 +2000,7 @@
       </article>
     </section>
 
-    <section class="sources-wrap">
+    <section class="sources-wrap" id="sources">
       <article class="card sources-panel">
         <div class="section-label">Archive / sources</div>
         <h2>The site earns trust by showing its receipts</h2>
@@ -2092,6 +2206,86 @@
         strip.append(item);
       });
       return strip;
+    }
+
+    function renderChapterLedger(chapters, sourcesById, eventsByChapterId, artifactsByChapterId, roadmap, openArchiveScope) {
+      const root = document.getElementById('chapterLedger');
+      if (!root) return;
+      const roadmapByChapter = new Map();
+      (roadmap || []).forEach((entry) => {
+        if (!roadmapByChapter.has(entry.chapterId)) roadmapByChapter.set(entry.chapterId, []);
+        roadmapByChapter.get(entry.chapterId).push(entry);
+      });
+
+      const auditRows = buildChapterAudit(chapters, sourcesById, eventsByChapterId, artifactsByChapterId);
+      auditRows.forEach((entry) => {
+        const chapter = entry.chapter;
+        const card = make('article', 'ledger-card');
+        card.dataset.tone = entry.tone;
+
+        const topline = make('div', 'ledger-topline');
+        const phase = make('span', 'artifact-pill', `${chapter.phase} - ${chapter.range}`);
+        phase.dataset.tone = entry.tone === 'ready' ? 'validation' : entry.tone === 'primary' ? 'evidence' : entry.tone === 'context' ? 'primary' : 'present';
+        topline.append(phase);
+        const status = make('span', 'artifact-pill', entry.statusLabel);
+        status.dataset.tone = entry.tone === 'ready' ? 'validation' : entry.tone === 'primary' ? 'evidence' : entry.tone === 'context' ? 'primary' : 'present';
+        topline.append(status);
+        if ((roadmapByChapter.get(chapter.id) || []).length) {
+          const gap = make('span', 'artifact-pill', `${roadmapByChapter.get(chapter.id).length} capture target${roadmapByChapter.get(chapter.id).length === 1 ? '' : 's'}`);
+          gap.dataset.tone = 'context';
+          topline.append(gap);
+        }
+        card.append(topline);
+
+        card.append(make('h3', '', chapter.title));
+        card.append(make('p', '', chapter.dek));
+
+        const metrics = make('div', 'ledger-metrics');
+        [
+          ['Source mix', `${entry.primaryCount} direct / ${entry.contextCount} bridge / ${entry.workingCount} working`],
+          ['Archive density', `${entry.eventCount} timeline event${entry.eventCount === 1 ? '' : 's'} / ${entry.artifactCount} artifact${entry.artifactCount === 1 ? '' : 's'}`],
+          ['Editorial stance', chapter.evidenceProfile?.stance || 'Evidence posture forming'],
+          ['Upgrade threshold', chapter.evidenceProfile?.artifact || 'Needs stronger primary proof before richer treatment']
+        ].forEach(([label, value]) => {
+          const metric = make('div', 'ledger-metric');
+          metric.append(make('strong', '', label));
+          metric.append(make('span', '', value));
+          metrics.append(metric);
+        });
+        card.append(metrics);
+
+        const topRoadmap = (roadmapByChapter.get(chapter.id) || [])[0];
+        if (topRoadmap) {
+          const gap = make('div', 'ledger-gap', `${topRoadmap.priority} priority evidence gap: ${topRoadmap.title}. ${topRoadmap.desiredEvidence}.`);
+          card.append(gap);
+        }
+
+        const actions = make('div', 'ledger-actions');
+        const focus = make('button', 'ledger-action primary', 'Focus chapter');
+        focus.type = 'button';
+        focus.addEventListener('click', () => {
+          announceChapterFocus(chapter.id, { scrollArchive: true, scrollSources: true });
+          document.getElementById(chapter.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        actions.append(focus);
+
+        const archive = make('button', 'ledger-action', 'Open archive evidence');
+        archive.type = 'button';
+        archive.addEventListener('click', () => openArchiveScope?.(chapter.id));
+        actions.append(archive);
+
+        if (topRoadmap) {
+          const roadmapButton = make('button', 'ledger-action', 'View capture target');
+          roadmapButton.type = 'button';
+          roadmapButton.addEventListener('click', () => {
+            document.getElementById(`roadmap-${topRoadmap.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          });
+          actions.append(roadmapButton);
+        }
+
+        card.append(actions);
+        root.append(card);
+      });
     }
 
     function renderChapters(chapters, sourcesById, artifactsByChapterId, taxonomyById, eventsByChapterId, openArchiveScope) {
@@ -3624,6 +3818,7 @@
       });
       renderPhaseRail(chapters);
       const archiveApi = renderArchive(timeline.events, sourcesById, chaptersById);
+      renderChapterLedger(chapters, sourcesById, eventsByChapterId, artifactsByChapterId, sourceRoadmap, archiveApi.openArchiveScope);
       renderChapters(chapters, sourcesById, artifactsByChapterId, taxonomyById, eventsByChapterId, archiveApi.openArchiveScope);
       renderMapNav(chapters, locationById, eventsByChapterId, sourcesById);
       const setActiveLocation = initializeMap(locations, chapters);
