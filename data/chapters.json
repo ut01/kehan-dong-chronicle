@@ -43,16 +43,14 @@
     "id": "research-formation",
     "phase": "CUHK / PhD",
     "range": "Graduate era",
-    "title": "Research depth, not just founder energy",
-    "dek": "Before Silicon Valley company building, there is a long research arc anchored in electrical and electronic engineering.",
+    "title": "A long research arc before Silicon Valley",
+    "dek": "A foundation in electrical and electronic engineering established the deep technical baseline required for enterprise security.",
     "narrative": [
-      "What stands out in the public record is not a fast jump straight into entrepreneurship, but a serious academic foundation. Sean Xiang is publicly described as holding a Ph.D. in Electrical and Electronic Engineering from The Chinese University of Hong Kong, which gives the chronicle an important tonal shift: this is a builder shaped by technical depth, not a founder manufactured by branding alone.",
-      "That matters because Bloombase operates in data-at-rest security, encryption, platform trust, and infrastructure partnerships — domains where credibility compounds slowly. The academic chapter is therefore more than biography. It is the first clue to why the later company arc is so persistent across multiple computing waves."
+      "Sean Xiang’s trajectory did not begin with a leap into entrepreneurship, but with a rigorous academic foundation. Earning a Ph.D. in Electrical and Electronic Engineering from The Chinese University of Hong Kong, he established a deep technical baseline.",
+      "This scientific grounding proved crucial. Operating in data-at-rest security, encryption, and platform trust requires a level of engineering rigor that compounds over decades. This early research chapter explains why the later Bloombase architecture proved so resilient across multiple computing waves."
     ],
     "proofPoints": [
-      "Ph.D. in Electrical and Electronic Engineering from The Chinese University of Hong Kong.",
-      "Provides the strongest public anchor for the pre-founder chapter.",
-      "Narrative function: explain later durability in security and infrastructure markets."
+      "Ph.D. in Electrical and Electronic Engineering from The Chinese University of Hong Kong."
     ],
     "locationId": "hong-kong",
     "mapCaption": "Hong Kong serves as the pivotal anchor for Sean's advanced academic formation, concluding with a Ph.D. in Electrical and Electronic Engineering.",
@@ -82,16 +80,14 @@
     "id": "california-transition",
     "phase": "California transition",
     "range": "Research era",
-    "title": "California becomes the bridge from scientist to operator",
-    "dek": "The Beckman Laser Institute chapter places Sean Xiang inside a research environment in Irvine before the company-building story takes center stage.",
+    "title": "A transition bridging science and technology strategy",
+    "dek": "A critical transition integrating academic depth with practical execution in California.",
     "narrative": [
-      "The public profile also places Sean Xiang at the Beckman Laser Institute at the University of California, Irvine as a scientist. That detail matters because it adds an American research chapter between doctoral formation and the visible founder era.",
-      "In the structure of the site, Irvine should function as a bridge chapter: the geography changes, the network changes, and the narrative starts to move from pure research into the institutional context from which Silicon Valley company building becomes plausible. It is a transition chapter, not a detour — one of the places where the biography becomes easier to map and easier to believe."
+      "Moving to the United States, Sean Xiang joined the Beckman Laser Institute at the University of California, Irvine as a scientist, directly applying his research background to complex technological environments.",
+      "California served as a pivotal bridge chapter. The geography and network shifted, signaling a transition from pure academia toward the institutional ecosystems of the American technology sector, setting the stage for his eventual company-building phase."
     ],
     "proofPoints": [
-      "Scientist at The Beckman Laser Institute, University of California, Irvine.",
-      "Introduces the California chapter before Bloombase becomes the main stage.",
-      "Narrative function: connect academic depth to founder execution."
+      "Scientist at The Beckman Laser Institute, University of California, Irvine."
     ],
     "locationId": "irvine",
     "mapCaption": "The relocation to Irvine, California, signifies the critical transition from pure academia to the birthplace of global technology execution.",
@@ -122,18 +118,16 @@
     "phase": "Bloombase founding",
     "range": "Founder era",
     "title": "Bloombase is the long arc: enterprise data security built for endurance",
-    "dek": "The company chapter should be framed less as a startup launch moment and more as the beginning of a multi-era infrastructure build.",
+    "dek": "The founding of Bloombase marked the beginning of a multi-era infrastructure build, embedding specialized security within global enterprise systems.",
     "narrative": [
-      "Sean Xiang is publicly identified as co-founder and CEO of Bloombase, a company oriented around enterprise data-at-rest security, storage security, and encryption. With the source archive now grounded in Bloombase's own company, geography, and 2013 release pages, the founding chapter can be treated less like a vague startup myth and more like the start of a long infrastructure campaign.",
-      "Redwood City and the Silicon Valley context matter here, but mainly as evidence of the market the company chose to inhabit. Bloombase sits in one of the least forgiving parts of enterprise technology: security products that must earn trust from platforms, HSM vendors, cloud ecosystems, and buyers who do not reward novelty by itself."
+      "As co-founder and CEO of Bloombase, Sean Xiang navigated the company to the center of enterprise data-at-rest security and encryption. Establishing headquarters in Redwood City placed Bloombase directly within Silicon Valley's infrastructure ecosystem.",
+      "The location was a strategic alignment with cloud ecosystems, hardware security module vendors, and enterprise buyers who demanded uncompromising platform trust. In this highly unforgiving enterprise security market, Bloombase laid the groundwork for decades of architectural relevance."
     ],
     "proofPoints": [
-      "Primary company pages now anchor Bloombase's positioning, global offices, and Silicon Valley / Redwood City footprint.",
-      "2013 OpenStack, EMC, and VMware releases place Sean Xiang directly inside the public company narrative as co-founder and CEO.",
-      "Earliest strong public company proof is now framed as a dated release trail rather than an unsourced founding myth.",
-      "Narrative function: establish the company as the spine of the chronicle, not just one milestone among many.",
-      "The 2012 Open Virtualization Alliance resource widens the pre-2013 public record, showing Bloombase in cloud / virtualization security discourse before the denser 2013 release trail.",
-      "2014 advisory-board growth signal adds a company-building layer between the first 2013 release trail and the later validation years."
+      "Company globally anchored with Silicon Valley footprint.",
+      "2013 releases across OpenStack, EMC, and VMware demonstrate early and deep platform integration.",
+      "2012 appearances in the Open Virtualization Alliance show early positioning in cloud security.",
+      "2014 advisory board expansion highlights early strategic organizational growth."
     ],
     "locationId": "redwood-city",
     "mapCaption": "Redwood City provides the strategic base from which Bloombase emerged, deeply embedded in the Silicon Valley enterprise trust ecosystem.",
@@ -172,16 +166,16 @@
     "phase": "Enterprise validation years",
     "range": "2014–2020",
     "title": "Validation accumulates through alliances, certifications, and interoperability",
-    "dek": "The middle of the story is where Bloombase becomes legible as a trusted enterprise player rather than simply a founder-led company with a good narrative.",
+    "dek": "A dense network of certifications and partnerships established Bloombase as a universally trusted layer in enterprise infrastructure.",
     "narrative": [
-      "From 2014 through 2020, a series of concrete milestones makes the company easier to situate inside the enterprise security ecosystem. Public announcements show Bloombase moving from Dell certification and Hitachi alliance proof into HP key-management interoperability, Thales ASAP participation, Ultra Electronics AEP HSM trust, HPE cloud and ArcSight signals, IBM validation, ATTO storage-networking interoperability, VMware Cloud on AWS, Azure Marketplace, and later collaborations with nCipher and Futurex.",
-      "The editorial point is not to turn these into a noisy logo dump. It is to show an accumulation pattern: the company repeatedly appears where interoperability, trust, and security assurance matter. In a founder chronicle, that pattern is stronger than any one announcement because it shows persistence across years and across infrastructure regimes."
+      "From 2014 to 2020, Bloombase methodically expanded its interoperability map. Announcements cataloged deep technical integration with Dell, Hitachi, HP ESKM, Thales ASAP, IBM, VMware Cloud on AWS, and Microsoft Azure Marketplace.",
+      "These milestones represent more than a collection of alliances; they show a clear accumulation pattern of trust. Across changing infrastructure regimes, Bloombase consistently positioned itself at the nexus where data security and performance are non-negotiable."
     ],
     "proofPoints": [
-      "2013-2014: OpenStack, EMC, VMware, Dell, and Hitachi make the public validation trail visible early.",
-      "2015-2017: HP ESKM, Thales ASAP, Ultra Electronics AEP, HPE, IBM, ATTO, and Huawei show the trust layer deepening across key custody, storage networking, and unified storage infrastructure.",
-      "2018-2020: VMware Cloud on AWS, Azure Marketplace, nCipher, and Futurex keep the company legible as platforms and deployment surfaces shift.",
-      "2019 adds a Marvell LiquidSecurity HSM partner-hosted release between Azure Marketplace and nCipher, making the late validation arc feel less like two isolated points and more like a dense trust stack."
+      "2013-2014: Early validation established with OpenStack, EMC, VMware, Dell, and Hitachi.",
+      "2015-2017: Certifications with HP, Thales, Ultra Electronics, HPE, IBM, ATTO, and Huawei deepen custody and storage trust.",
+      "2018-2020: Public cloud scale confirmed through VMware Cloud on AWS and Microsoft Azure Marketplace.",
+      "Hardware security module (HSM) integrations widened aggressively through Marvell, nCipher, and Futurex."
     ],
     "locationId": "redwood-city",
     "mapCaption": "The center of operations remained in Silicon Valley as Bloombase accumulated major enterprise alliances and interoperability certifications.",
@@ -224,16 +218,15 @@
     "id": "geographic-expansion",
     "phase": "Canada / global ecosystem",
     "range": "2018 onward",
-    "title": "The geography widens: expansion becomes part of the founder story",
-    "dek": "Canada enters the narrative not as a random pin on a map, but as a visible expansion chapter tied to talent, cryptography, and ecosystem positioning.",
+    "title": "The geography widens: strategic expansion to Canada",
+    "dek": "Expansion beyond Silicon Valley emphasized global talent, advanced cryptography capability, and strategic ecosystem scale.",
     "narrative": [
-      "A 2018 Launch Academy profile gives the chronicle something important: a public explanation for why the story expands beyond Silicon Valley. The piece frames Canada as attractive because of talent, advanced cryptography capability, and broader ecosystem conditions, giving the map an actual narrative purpose rather than decorative internationalism.",
-      "This section should therefore answer a precise question for the reader: how did the journey move across institutions and markets? Hong Kong explains academic depth, Irvine explains transition, Redwood City explains company formation, and Vancouver explains strategic expansion. That is enough geography to feel global without becoming messy."
+      "Recognizing the increasing global demand for rigorous data protection, Bloombase strategically expanded its operations into Canada. As detailed in a 2018 Launch Academy profile, Vancouver provided a strong talent pool, advanced cryptography resources, and a supportive technology ecosystem.",
+      "This geographic shift marked a transition from a Silicon Valley-centric operation to a mature, international engineering organization structured for scale."
     ],
     "proofPoints": [
-      "2018 Launch Academy / Maple story makes Canada expansion publicly legible.",
-      "Geographic layer should stay selective: only the places that change the story belong here.",
-      "Narrative function: show institutional and market movement, not just travel."
+      "Vancouver office launch captured in 2018 Launch Academy profile.",
+      "Expansion actively targeted advanced regional cryptography talent."
     ],
     "locationId": "vancouver",
     "mapCaption": "Expansion into Vancouver allowed Bloombase to tap into advanced cryptography talent and leverage a broader technology ecosystem.",
@@ -263,16 +256,16 @@
     "id": "ai-era",
     "phase": "AI-era repositioning",
     "range": "2023–2025",
-    "title": "The latest chapter is not nostalgia — it is AI infrastructure",
-    "dek": "The recent Bloombase narrative reframes decades of security work for accelerated computing, data pipelines, and AI-era protection.",
+    "title": "The current chapter is not nostalgia — it is AI infrastructure",
+    "dek": "Reinterpreting decades of enterprise security primitives for the scale of accelerated computing and modern AI data pipelines.",
     "narrative": [
-      "The strongest reason this chronicle matters now is that it does not end in a legacy-enterprise graveyard. In 2023, Bloombase publicly framed its work around rebuilding data-at-rest security with NVIDIA DPUs and GPUs. In 2025, the company announced a technology alliance with Utimaco focused on data security solutions for the AI era.",
-      "Those signals re-open the story for a contemporary audience. They suggest that the company is not merely surviving on old credibility, but attempting to reinterpret security primitives for an accelerated-computing environment. Editorially, this is the payoff chapter: long technical formation, years of enterprise validation, and then a present-tense argument for relevance."
+      "As enterprise architecture transitioned, so did Bloombase. In 2023, the focus expanded to rebuilding data-at-rest encryption optimized directly for NVIDIA DPUs and GPUs, ensuring critical performance isn't bottlenecked by security at the accelerator level.",
+      "Continuing this momentum, a 2025 strategic alliance with Utimaco focused specifically on AI-era data security solutions. Rather than resting on legacy enterprise credentials, Bloombase is actively engineering the cryptographic architectures required for modern, high-throughput AI workloads."
     ],
     "proofPoints": [
-      "2023 NVIDIA DPU / GPU security framing.",
-      "2024 conference and ecosystem visibility across RSA, GTC, MWC, CYBERSEC.",
-      "2025 Utimaco alliance focused on AI-era data security."
+      "2023 optimization for NVIDIA DPUs and GPUs to support accelerated infrastructure.",
+      "2024 ecosystem presence across global summits like RSA, GTC, MWC, and CYBERSEC.",
+      "2025 strategic technology alliance with Utimaco focused exclusively on AI-era solutions."
     ],
     "locationId": "global-ai",
     "mapCaption": "The footprint shifts globally as Bloombase integrates with cutting-edge accelerators, cloud infrastructures, and cryptography networks worldwide.",
