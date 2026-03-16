@@ -108,6 +108,7 @@
     "id": "global-ai",
     "name": "Global AI infrastructure",
     "label": "Conference and alliance layer",
+    "distributed": true,
     "lat": 37.7749,
     "lon": -122.4194,
     "summary": "The current chapter is distributed across cloud, accelerator, and security ecosystems rather than one city.",

@@ -2735,9 +2735,9 @@
       <article class="card hero-copy">
         <div class="eyebrow">Founder chronicle</div>
         <h1>Sean Xiang</h1>
-        <p class="lede">From doctoral engineering formation to a long enterprise-security build — and now an argument for relevance in the AI infrastructure era.</p>
+        <p class="lede">From doctoral engineering formation to a long enterprise-security build — and now a present-tense case for AI infrastructure.</p>
         <p class="summary">
-          An editorial archive documenting a chronological transition from foundational academic research through comprehensive enterprise validity, anchored by a verifiable timeline, geographical contexts, and primary sources.
+          An editorial archive tracing academic research through enterprise validation, anchored by a verifiable timeline, geography, and primary sources.
         </p>
         <div class="chips" id="heroChips">
           <span class="chip">CUHK Ph.D.</span>
@@ -2752,7 +2752,7 @@
         <div>
           <div class="aside-title">Chronicle thesis</div>
           <p class="summary" style="margin-top:8px; margin-bottom:0;">
-            A documented progression of durable technical depth compounding into enterprise leadership. It traces critical ecosystem partnerships through a present-tense focus on AI infrastructure.
+            Technical depth, compounded over decades, into enterprise leadership. It traces ecosystem partnerships through a present-tense focus on AI infrastructure.
           </p>
         </div>
         <div class="thesis-grid" id="heroStats"></div>
@@ -2782,14 +2782,14 @@
             <div class="section-label">Chapter compass</div>
             <h2>Navigate through historical and technical phases of the chronicle</h2>
             <p class="ledger-intro" style="margin-bottom:0;">
-              Examine the historical arcs chapter by chapter. Each card identifies the chapter's focus, quantifies its underlying evidence density, and provides direct paths to either the narrative synthesis or the deep evidence desk.
+              Examine the historical arcs chapter by chapter. Each card identifies the chapter's focus, quantifies its evidence density, and links to the narrative or evidence desk.
             </p>
           </div>
           <div class="chapter-compass-actions">
             <div class="deep-desk-card">
               <div class="section-label" style="color:rgba(247,242,233,.66); margin-bottom:8px;">Deep evidence desk</div>
               <strong style="display:block; font-family:Georgia,serif; font-size:28px; line-height:1.18; letter-spacing:-.02em;">Access Primary Exhibits and Archives</strong>
-              <p>Navigate directly to detailed historical exhibits, extensive chronologies, or the complete source desk, examining the primary documents supporting each phase.</p>
+              <p>Go to exhibits, chronologies, or the source desk to examine primary documents for each phase.</p>
               <div class="deep-desk-actions" id="deepDeskActions"></div>
             </div>
           </div>
@@ -2814,7 +2814,7 @@
         <div class="section-kicker">Information architecture</div>
         <h2>Structuring a verified historical narrative</h2>
         <p class="intro-copy">
-          This site is organized to sequentially present claims and their proofs: starting with an overarching thesis, followed by distinct chronological chapters, and culminating in an explicit catalog of the enterprise validation, geographic footprint, and exhaustive primary sources.
+          This site presents claims and proofs in sequence: a thesis, followed by chronological chapters, culminating in a catalog of enterprise validation, geographic footprint, and primary sources.
         </p>
       </article>
       </article>
@@ -2869,7 +2869,7 @@
           <div>
             <h2>An exhaustive chronological ledger of verifiable milestones</h2>
             <p class="archive-note" id="archiveNote">
-              A comprehensive view into every indexed event across the timeline dataset. Accessible in its entirety for deep research or securely filtered to trace the specifics of individual chapters.
+              Every indexed event in the timeline. View the full archive or filter by chapter.
             </p>
           </div>
           <div class="archive-controls">
@@ -2900,7 +2900,7 @@
         <div class="section-label">Archive / sources</div>
         <h2>Direct Source Exploration</h2>
         <p class="intro-copy">
-          A definitive index of external validation spanning press coverage, technical archives, and university records. The archive rigorously segregates primary documentation from context sources, prioritizing strict claim verification over narrative embellishment.
+          An index of external validation spanning press coverage, technical archives, and university records. Primary sources are separated from context sources.
         </p>
         <div class="source-summary" id="sourceSummary"></div>
         <section class="audit-card source-explorer">
@@ -2969,8 +2969,8 @@
     function renderHeroStats(chapters, locations, timeline, sources) {
       const root = document.getElementById('heroStats');
       if (!root) return;
-      const mappedAnchors = locations.filter((location) => Number.isFinite(location.lat) && Number.isFinite(location.lon) && !(location.lat === 0 && location.lon === 0)).length;
-      const distributedCount = locations.length - mappedAnchors;
+      const mappedAnchors = locations.filter((location) => !location.distributed && Number.isFinite(location.lat) && Number.isFinite(location.lon) && !(location.lat === 0 && location.lon === 0)).length;
+      const distributedCount = locations.filter((location) => location.distributed).length;
       const directSources = sources.filter((source) => source.verificationState === 'direct').length;
       const undatedEvents = timeline.events.filter((event) => !event.start_date?.year).length;
       const stats = [
