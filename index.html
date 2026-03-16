@@ -2728,7 +2728,6 @@
   <main class="shell">
     <div class="topline">
       <span>Sean Xiang Chronicle</span>
-      <span>Editorial founder timeline · source-backed structure</span>
     </div>
 
     <section class="hero">
@@ -2762,7 +2761,6 @@
     <section class="card reader-modes" aria-label="Reader mode controls">
       <div class="reader-mode-copy">
         <div class="section-kicker">Reader modes</div>
-        <p id="readerModeSummary">Skim mode keeps the founder thesis, chapter arc, map, and validation surface in view. Deep mode opens the full exhibit, archive, and source desk for readers who want to audit the record.</p>
         <div class="reader-mode-status" id="readerModeStatus"></div>
       </div>
       <div class="reader-mode-controls" role="tablist" aria-label="Choose reading mode">
@@ -2811,11 +2809,6 @@
 
     <section class="overview">
       <article class="card overview-copy">
-        <div class="section-kicker">Information architecture</div>
-        <h2>Structuring a verified historical narrative</h2>
-        <p class="intro-copy">
-          This site presents claims and proofs in sequence: a thesis, followed by chronological chapters, culminating in a catalog of enterprise validation, geographic footprint, and primary sources.
-        </p>
       </article>
       </article>
     </section>
@@ -2867,10 +2860,7 @@
         <div class="section-label">Reference timeline</div>
         <div class="archive-header">
           <div>
-            <h2>An exhaustive chronological ledger of verifiable milestones</h2>
-            <p class="archive-note" id="archiveNote">
-              Every indexed event in the timeline. View the full archive or filter by chapter.
-            </p>
+            <p class="archive-note" id="archiveNote"></p>
           </div>
           <div class="archive-controls">
             <div class="archive-scope" id="archiveScope">
@@ -2898,18 +2888,12 @@
     <section class="sources-wrap is-deep-section" id="sources">
       <article class="card sources-panel">
         <div class="section-label">Archive / sources</div>
-        <h2>Direct Source Exploration</h2>
-        <p class="intro-copy">
-          An index of external validation spanning press coverage, technical archives, and university records. Primary sources are separated from context sources.
-        </p>
         <div class="source-summary" id="sourceSummary"></div>
         <section class="audit-card source-explorer">
           <div class="section-label">Source explorer</div>
           <div class="source-explorer-header">
             <div>
-              <h3>Filter the archival ledger by origin, posture, and validation</h3>
-              <p>Isolate specific evidentiary materials. Review the origin of documents, examine exactly how each source supports the chronicle's events, and filter records by their verification status ranging from primary proofs to working materials.</p>
-            </div>
+              </div>
             <div class="source-controls">
               <label class="source-search" for="sourceSearchInput">
                 <span class="source-filter-label">Search the archive</span>
@@ -2927,8 +2911,6 @@
         <div class="public-record-wrap">
           <section class="audit-card">
             <div class="section-label">Primary chronology ledger</div>
-            <h3>A cohesive chronology of primary external validations</h3>
-            <p class="public-record-intro">By aggregating high-confidence sources into distinct chronological arcs, this ledger presents the trajectory from early academic and technology milestones, through enterprise growth, to modern infrastructure engagements without requiring manual timeline assembly.</p>
             <div class="public-record-grid" id="publicRecordLedger"></div>
             <div class="archive-capture-wrap" id="archiveCaptureDesk"></div>
           </section>
@@ -2974,10 +2956,10 @@
       const directSources = sources.filter((source) => source.verificationState === 'direct').length;
       const undatedEvents = timeline.events.filter((event) => !event.start_date?.year).length;
       const stats = [
-        [String(chapters.length), 'Editorial chapters with distinct narrative roles across a full life chronology.'],
-        [`${mappedAnchors}+${distributedCount}`, 'Real mapped anchors, plus a deliberate distributed view for the AI-infrastructure chapter.'],
-        [String(timeline.events.length), 'Reference-grade archive events spanning the full chronology.'],
-        [String(directSources), 'Direct claim-supporting sources surfaced in the archive.']
+        [String(chapters.length), 'Chapters'],
+        [`${mappedAnchors}+${distributedCount}`, 'Mapped anchors + distributed view'],
+        [String(timeline.events.length), 'Archive events'],
+        [String(directSources), 'Direct sources']
       ];
 
       stats.forEach(([value, text]) => {
@@ -3171,8 +3153,8 @@
       const status = document.getElementById('readerModeStatus');
       const buttons = Array.from(document.querySelectorAll('.reader-mode-button'));
       const modeCopy = {
-        skim: 'Skim mode keeps the founder thesis, chapter arc, map, and validation surface in view. Deep mode opens the full exhibit, archive, and source desk for readers who want to audit the record.',
-        deep: 'Deep mode turns the page into a source-backed editorial desk: chapter dossiers, exhibits, archive chronology, roadmap, and source explorer all stay in play alongside the chapter narrative.'
+        skim: '',
+        deep: ''
       };
       const modePills = {
         skim: ['Fast read', 'Narrative chapters', 'Map + validation'],
