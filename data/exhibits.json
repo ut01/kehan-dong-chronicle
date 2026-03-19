@@ -1,31 +1,8 @@
 [
   {
-    "id": "exhibit-sgc-education",
-    "chapterId": "dku-startup-go-camp",
-    "eyebrow": "Exhibit 01 · Educational impact",
-    "title": "Startup Go Camp: Documented educational excellence",
-    "summary": "The Duke Kunshan University article provides comprehensive documentation of SGC's structure, methodology, and impact, including the exceptional 90.4/100 student rating.",
-    "comparativeBeats": [
-      {
-        "label": "Course structure",
-        "text": "6-week intensive covering entrepreneurial basics, market demand, user research, MVP development, business strategy, team management, and financing."
-      },
-      {
-        "label": "Teaching methodology",
-        "text": "Combines classic business cases (like Facebook's startup story) with personal entrepreneurial experience, plus 4-hour weekly Office Hours for high-quality student interaction."
-      },
-      {
-        "label": "Student outcomes",
-        "text": "90.4/100 satisfaction rating, with many students continuing to build their projects after course completion. Strong freshman participation indicating early entrepreneurial engagement."
-      }
-    ],
-    "artifactIds": ["dku-sgc-article"],
-    "sourceIds": ["dku-article"]
-  },
-  {
     "id": "exhibit-founder-philosophy",
     "chapterId": "current-focus",
-    "eyebrow": "Exhibit 02 · Core philosophy",
+    "eyebrow": "Exhibit 01 · Core philosophy",
     "title": "The philosophy of early building and unconventional paths",
     "summary": "Kehan Dong's personal website and public statements articulate a clear philosophy: supporting people who start building earlier than they're supposed to, focusing on unconventional paths and long-term agency.",
     "comparativeBeats": [
@@ -35,7 +12,7 @@
       },
       {
         "label": "Educational approach",
-        "text": "Creating environments where people can discover what they're capable of early, through programs like SGC and Inner Journey."
+        "text": "Creating environments where people can discover what they're capable of early, through programs like Inner Journey."
       },
       {
         "label": "Systems thinking",
@@ -43,7 +20,7 @@
       }
     ],
     "artifactIds": ["kehandong-website-profile"],
-    "sourceIds": ["kehandong-website", "dku-article"]
+    "sourceIds": ["kehandong-website"]
   },
   {
     "id": "exhibit-inner-journey",

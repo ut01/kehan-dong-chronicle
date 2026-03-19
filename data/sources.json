@@ -13,19 +13,6 @@
     "notes": "Personal website clearly states: 'I work with people who start building earlier than they're supposed to. Early founders, unconventional paths, long-term agency.' Also describes investing, writing, and building systems around early founders, education, and long-term agency."
   },
   {
-    "id": "dku-article",
-    "label": "Duke Kunshan University - SGC Article",
-    "url": "https://ine.dukekunshan.edu.cn/the-entrepreneurial-practice-and-dream-incubation-of-sgc/",
-    "publisherLabel": "Duke Kunshan University",
-    "publisherType": "third-party",
-    "evidenceLabel": "Institutional article",
-    "directnessLabel": "Direct institutional source",
-    "verificationState": "direct",
-    "year": "2025",
-    "claimScope": "Startup Go Camp founding, teaching approach, student ratings, and organizational roles",
-    "notes": "Comprehensive article describing SGC course, identifying Kehan Dong as 'angel investor, founder of Inner Journey, and founder of the NGO Code of Love.' Details 6-week course structure, 90.4/100 student rating, Office Hours approach, and teaching philosophy."
-  },
-  {
     "id": "inner-journey-website",
     "label": "The Inner Journey to Success",
     "url": "https://theinnerjourneytosuccess.com/",

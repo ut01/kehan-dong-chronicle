@@ -12,15 +12,27 @@
     }
   },
   {
-    "id": "kunshan-dku",
-    "name": "Kunshan, Jiangsu",
-    "label": "Duke Kunshan University / Startup Go Camp",
-    "lat": 31.3890,
-    "lon": 120.9800,
-    "summary": "Co-founded and taught Startup Go Camp at Duke Kunshan University, achieving 90.4/100 student rating.",
+    "id": "california-uc",
+    "name": "California",
+    "label": "University of California",
+    "lat": 37.8719,
+    "lon": -122.2585,
+    "summary": "Attended University of California before dropping out to pursue entrepreneurship full-time.",
     "camera": {
-      "center": [120.9800, 31.3890],
-      "zoom": 9.0
+      "center": [-122.2585, 37.8719],
+      "zoom": 8.0
+    }
+  },
+  {
+    "id": "us-universities",
+    "name": "United States",
+    "label": "40 University Tour & Angel Investing",
+    "lat": 39.8283,
+    "lon": -98.5795,
+    "summary": "Three-month tour across 40 top U.S. universities (Harvard, MIT, Stanford, Caltech, Berkeley, CMU, Duke, etc.), meeting thousands of students. Made 30 investments during this period. Delivered 130+ global university talks including every Ivy League and C9 university.",
+    "camera": {
+      "center": [-98.5795, 39.8283],
+      "zoom": 3.5
     }
   },
   {

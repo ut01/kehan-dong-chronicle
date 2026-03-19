@@ -7,89 +7,96 @@
   },
   "events": [
     {
+      "start_date": {
+        "year": "2011",
+        "month": "5"
+      },
+      "end_date": {
+        "year": "2019"
+      },
       "text": {
-        "headline": "Early Educational Formation",
-        "text": "Educational foundation that shaped understanding of early capability discovery."
+        "headline": "The Code of Love (NGO) - Founder and President",
+        "text": "Founded The Code of Love while in high school in Shanghai. Grew from a small volunteer initiative into a long-running nonprofit focused on reducing educational inequality. Organized 1,700+ volunteers and delivered educational programs to 6,500+ underprivileged students across five countries. Built libraries, supported rural teaching programs, and connected students with long-term sponsorships through university. This experience shaped values around responsibility, scale, and impact, and led to a shift toward technology and innovation-driven education."
       },
       "sourceIds": ["kehandong-website"],
-      "id": "early-education",
+      "id": "code-of-love-founding",
+      "chapterId": "code-of-love-ngo",
+      "sortBucket": "founding"
+    },
+    {
+      "start_date": {
+        "year": "2014"
+      },
+      "text": {
+        "headline": "University of California - Dropped Out",
+        "text": "Attended University of California before dropping out to pursue entrepreneurship full-time."
+      },
+      "sourceIds": ["kehandong-website"],
+      "id": "uc-dropout",
       "chapterId": "early-education",
-      "dateLabel": "Early years",
-      "undated": true,
       "sortBucket": "formation"
     },
     {
+      "start_date": {
+        "year": "2015"
+      },
+      "end_date": {
+        "year": "2019"
+      },
       "text": {
-        "headline": "Inner Journey Founded",
-        "text": "Founded Inner Journey, a transformational program for founders and leaders focused on conscious growth and inner alignment."
+        "headline": "Inner Journeys - Founder and CEO",
+        "text": "Started Inner Journeys as a small project during junior year at university. Left school to build it full-time. Went through multiple rounds of funding, worked with an early team, and scaled the product through several iterations. Company was eventually acquired in 2020. Led to Forbes 30 Under 30 recognition and shaped understanding of building from zero, understanding users, and navigating early startup chaos."
       },
       "sourceIds": ["inner-journey-website", "kehandong-website"],
       "id": "inner-journey-founding",
       "chapterId": "inner-journey-founding",
-      "dateLabel": "Founded",
-      "undated": true,
       "sortBucket": "founding"
     },
     {
-      "text": {
-        "headline": "Code of Love NGO Founded",
-        "text": "Founded Code of Love, an NGO focused on social impact and educational initiatives."
+      "start_date": {
+        "year": "2019",
+        "month": "3"
       },
-      "sourceIds": ["dku-article", "kehandong-website"],
-      "id": "code-of-love-founding",
-      "chapterId": "code-of-love-ngo",
-      "dateLabel": "Founded",
-      "undated": true,
-      "sortBucket": "founding"
-    },
-    {
-      "text": {
-        "headline": "Angel Investing Activity",
-        "text": "Active angel investor supporting early-stage founders, unconventional paths, and long-term agency."
+      "end_date": {
+        "year": "2019",
+        "month": "11"
       },
-      "sourceIds": ["kehandong-website", "dku-article"],
-      "id": "angel-investing",
-      "chapterId": "angel-investing",
-      "dateLabel": "Ongoing",
-      "undated": true,
+      "text": {
+        "headline": "Y Combinator China - Associate, Founding Team",
+        "text": "Joined the founding team of YC China as one of the youngest members selected by YC partners to explore YC's potential second global headquarters. Worked with Sam Altman and the global YC network on investment evaluation, founder support, and program design. Explored how to adapt YC's principles to a new market and build a long-term ecosystem for young founders. YC eventually paused the China initiative as Sam focused on OpenAI. This experience shaped thinking about early-stage founders, scalable talent discovery, and world-class entrepreneurship platforms."
+      },
+      "sourceIds": ["kehandong-website"],
+      "id": "yc-china",
+      "chapterId": "yc-china",
       "sortBucket": "investing"
     },
     {
       "start_date": {
-        "year": "2024"
+        "year": "2019",
+        "month": "3"
       },
       "end_date": {
-        "year": "2025"
+        "year": "2025",
+        "month": "8"
       },
       "text": {
-        "headline": "Startup Go Camp at Duke Kunshan University",
-        "text": "Co-founded and taught SGC, a 6-week intensive entrepreneurial course achieving 90.4/100 student rating. Collaborated with DKU Innovation and Entrepreneurship Initiative."
+        "headline": "MiraclePlus - Investment & Operations, Founding Team",
+        "text": "Core member of the founding team at MiraclePlus (formerly Y Combinator China). Worked on investment, operations, and founder support across multiple batches. Over six years, evaluated 160,000+ applications, interviewed thousands of founders, and participated in 600+ early-stage investments across AI, biotech, robotics, hard tech, and consumer. Built a 7,000+ member intern sourcing engine and developed a scalable model for discovering high-potential young founders. Sam Altman later noted that the intern-based system built at YC China was more effective than YC's Startup School for young people learning entrepreneurship."
       },
-      "sourceIds": ["dku-article"],
-      "id": "dku-sgc",
-      "chapterId": "dku-startup-go-camp",
-      "sortBucket": "education"
+      "sourceIds": ["kehandong-website"],
+      "id": "miracleplus",
+      "chapterId": "miracleplus",
+      "sortBucket": "investing"
     },
+
     {
       "start_date": {
-        "year": "2025"
+        "year": "2025",
+        "month": "9"
       },
       "text": {
-        "headline": "SGC Course Completion and Impact",
-        "text": "First SGC cohort completed with 90.4/100 rating. Many students continued building their entrepreneurial projects, with strong freshman participation indicating early entrepreneurial engagement."
-      },
-      "sourceIds": ["dku-article"],
-      "id": "sgc-completion",
-      "chapterId": "dku-startup-go-camp",
-      "sortBucket": "education"
-    },
-    {
-      "start_date": {
-        "year": "2026"
-      },
-      "text": {
-        "headline": "Current Focus: Integrated Systems",
-        "text": "Building systems around early founders, education, and long-term agency through investing, writing, and program development."
+        "headline": "Founder & Angel Investor - Self-employed",
+        "text": "Exploring how to help young people (14–22) start building things earlier. After leaving MiraclePlus, spent three months traveling across 40 top U.S. universities (Harvard, MIT, Stanford, Caltech, Berkeley, CMU, Duke, etc.), meeting thousands of students through lectures, roundtables, and conversations. During the same period, invested in 30 young founders across AI, biotech, robotics, and consumer—one of the fastest early-stage investment paces globally. Currently investing as a personal angel and working closely with student founders, researchers, and early teams. Over the past six years, made 650+ early-stage investments and built the largest student founder pipelines in China. Researching a new type of entrepreneurship platform for young builders combining real-world projects, long-term mentorship, AI-native tools, and community. Delivered 130+ global university talks, including every Ivy League and C9 university."
       },
       "sourceIds": ["kehandong-website"],
       "id": "current-focus",

@@ -21,38 +21,7 @@
       }
     ]
   },
-  {
-    "id": "dku-sgc-article",
-    "chapterId": "dku-startup-go-camp",
-    "type": "article",
-    "eyebrow": "Educational proof · 2025",
-    "title": "Duke Kunshan University article documents SGC success",
-    "excerpt": "The DKU Innovation and Entrepreneurship Initiative article provides comprehensive documentation of Startup Go Camp, including the 90.4/100 student rating, teaching methodology, and impact on student entrepreneurs.",
-    "caption": "This institutional article serves as the primary source for the SGC chapter, documenting both the program structure and its outcomes.",
-    "sourceId": "dku-article",
-    "displayMode": "document",
-    "visualTitle": "SGC institutional coverage",
-    "visualText": "2025 · Duke Kunshan University article identifies Kehan Dong as angel investor, founder of Inner Journey, and founder of Code of Love NGO.",
-    "quoteText": "SGC, jointly launched by angel investor, founder of Inner Journey, and founder of the NGO Code of Love, Kehan Dong, in collaboration with the DKU Innovation and Entrepreneurship Initiative, is tailored for student entrepreneurs.",
-    "mediaItems": [
-      {
-        "kicker": "Student satisfaction",
-        "title": "90.4/100 course rating",
-        "text": "Students rated the course as high as 90.4 points and expressed their love for the course many times.",
-        "meta": "Institutional source",
-        "tone": "primary",
-        "url": "https://ine.dukekunshan.edu.cn/the-entrepreneurial-practice-and-dream-incubation-of-sgc/"
-      },
-      {
-        "kicker": "Teaching approach",
-        "title": "4-hour weekly Office Hours",
-        "text": "High-quality interaction with students through dedicated Office Hours, creating space for students to share ideas without fear of judgment.",
-        "meta": "Educational methodology",
-        "tone": "context",
-        "url": "https://ine.dukekunshan.edu.cn/the-entrepreneurial-practice-and-dream-incubation-of-sgc/"
-      }
-    ]
-  },
+
   {
     "id": "inner-journey-program",
     "chapterId": "inner-journey-founding",

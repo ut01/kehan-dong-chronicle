@@ -99,6 +99,17 @@ now its not rendering correctly: the website map only show the same place/cannot
 - `index.html` - Main chronicle page
 - `news-index.html` - News/updates index page
 
+## Current Chronicle: Kehan Dong
+
+This chronicle documents the journey of Kehan Dong, founder, angel investor, and educator:
+
+- The Code of Love NGO (May 2011 - 2019) - 1,700+ volunteers, 6,500+ students across 5 countries
+- University of California dropout (2014)
+- Inner Journeys (2015 - 2019) - acquired in 2020, Forbes 30 Under 30, 1000+ lives transformed
+- Y Combinator China (Mar 2019 - Nov 2019) - founding team with Sam Altman
+- MiraclePlus (Mar 2019 - Aug 2025) - 160,000+ applications, 600+ investments, 7,000+ intern sourcing engine
+- Founder & Angel Investor (Sep 2025 - Present) - 40 university tour, 30 investments, 650+ total investments, 130+ global university talks
+
 ---
 
 ## Reference: Successful Conversion Example

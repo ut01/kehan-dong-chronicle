@@ -16,13 +16,25 @@
       {
         "type": "overview",
         "location": {
-          "lat": 31.3890,
-          "lon": 120.9800,
-          "zoom": 9
+          "lat": 30.5928,
+          "lon": 114.0579,
+          "zoom": 4.5
         },
         "text": {
-          "headline": "Duke Kunshan University / Startup Go Camp",
-          "text": "Co-founded and taught SGC, achieving 90.4/100 student rating through innovative teaching methodology combining business cases with personal experience."
+          "headline": "The Code of Love NGO (2011-2019)",
+          "text": "Founded while in high school in Shanghai. Organized 1,700+ volunteers and delivered educational programs to 6,500+ underprivileged students across five countries."
+        }
+      },
+      {
+        "type": "overview",
+        "location": {
+          "lat": 37.8719,
+          "lon": -122.2585,
+          "zoom": 8
+        },
+        "text": {
+          "headline": "University of California Dropout (2014)",
+          "text": "Attended University of California before dropping out to pursue entrepreneurship full-time."
         }
       },
       {
@@ -33,8 +45,44 @@
           "zoom": 1.5
         },
         "text": {
-          "headline": "Global impact",
-          "text": "Inner Journey has transformed 1000+ lives over 25+ years. Angel investing supports early-stage founders globally. Code of Love NGO extends educational impact."
+          "headline": "Inner Journeys (2015-2019)",
+          "text": "Started as a small project during junior year. Company was eventually acquired in 2020. Led to Forbes 30 Under 30 recognition. Transformed 1000+ lives over 25+ years."
+        }
+      },
+      {
+        "type": "overview",
+        "location": {
+          "lat": 30,
+          "lon": 110,
+          "zoom": 4
+        },
+        "text": {
+          "headline": "Y Combinator China (Mar 2019 - Nov 2019)",
+          "text": "Joined the founding team as one of the youngest members selected by YC partners. Worked with Sam Altman and the global YC network on investment evaluation and founder support."
+        }
+      },
+      {
+        "type": "overview",
+        "location": {
+          "lat": 30,
+          "lon": 110,
+          "zoom": 4
+        },
+        "text": {
+          "headline": "MiraclePlus (Mar 2019 - Aug 2025)",
+          "text": "Core founding team member. Evaluated 160,000+ applications, participated in 600+ early-stage investments. Built a 7,000+ member intern sourcing engine. Sam Altman noted the intern-based system was more effective than YC's Startup School."
+        }
+      },
+      {
+        "type": "overview",
+        "location": {
+          "lat": 39.8283,
+          "lon": -98.5795,
+          "zoom": 3.5
+        },
+        "text": {
+          "headline": "Founder & Angel Investor (Sep 2025 - Present)",
+          "text": "Three-month tour across 40 top U.S. universities. Made 30 investments during this period. 650+ total early-stage investments over six years. Delivered 130+ global university talks including every Ivy League and C9 university."
         }
       }
     ]
