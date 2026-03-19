@@ -1,20 +1,38 @@
 {
   "eyebrow": "Present direction",
   "title": "Why this chronicle matters now",
-  "summary": "The point of the page is not to memorialize an old enterprise-security run. It is to argue that Sean Xiang's long build becomes newly legible in the AI-infrastructure era, where data-at-rest protection, cryptographic trust, and accelerator-era architecture have to meet again.",
+  "summary": "The point of this chronicle is not to document past achievements, but to show how Kehan Dong's integrated approach to early founders, education, and long-term agency becomes increasingly relevant as more people seek unconventional paths to meaningful work.",
   "signals": [
     {
-      "label": "Long-cycle credibility",
-      "text": "The Bloombase record shows repeated interoperability and alliance milestones across more than one infrastructure generation — from Dell, Hitachi, and IBM in the mid-2010s to VMware Cloud on AWS, Azure Marketplace, and NVIDIA DPUs in the 2020s."
+      "label": "Integrated systems approach",
+      "text": "Kehan Dong operates across three interconnected domains: angel investing in early-stage founders, educational program development, and organizational founding. This integration creates a comprehensive support system for unconventional paths."
     },
     {
-      "label": "Post-quantum cryptography at GTC 2024",
-      "text": "Sean Xiang participated as a panelist at NVIDIA GTC 2024, discussing AI-era cyber defense alongside executives from NVIDIA, Qrypt, and Reality Defender. Bloombase demonstrated post-quantum cryptography encryption powered by NVIDIA GPU, DPU, and Morpheus AI at the event."
+      "label": "Educational excellence at Duke Kunshan",
+      "text": "The 90.4/100 student rating at Startup Go Camp demonstrates the effectiveness of his teaching methodology, which combines business cases with personal experience and emphasizes high-quality student interaction through Office Hours."
     },
     {
-      "label": "2025 alliance and standards membership",
-      "text": "The 2025 Utimaco alliance integrates Bloombase StoreSafe with NIST FIPS 140-2 Level 3 certified HSM key protection and OASIS KMIP-compliant key management. Bloombase also joined the PKI Consortium in November 2024, deepening its standards-level credibility."
+      "label": "Inner Journey's transformational impact",
+      "text": "With 1000+ lives transformed over 25+ years, Inner Journey represents a proven approach to helping founders and leaders align inner development with outer achievement, addressing the cost of scaling without inner alignment."
+    },
+    {
+      "label": "Focus on early discovery",
+      "text": "The central question driving all work: How do people discover what they're capable of early, and what environments make that possible? This inquiry shapes investment decisions, educational programs, and organizational development."
     }
   ],
-  "sourceIds": ["nvidia-2023", "utimaco-2025", "launch-academy"]
+  "nextMoves": [
+    {
+      "label": "Continued SGC development",
+      "text": "Building on the success of the first Startup Go Camp cohort, with potential for expansion and deeper integration with Duke Kunshan University's entrepreneurship ecosystem."
+    },
+    {
+      "label": "Scaling Inner Journey",
+      "text": "Expanding the reach of Inner Journey's transformational work with founders and leaders globally."
+    },
+    {
+      "label": "Angel investment portfolio",
+      "text": "Continuing to invest in early-stage founders who embody unconventional paths and long-term agency."
+    }
+  ],
+  "sourceIds": ["kehandong-website", "dku-article", "inner-journey-website"]
 }

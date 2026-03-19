@@ -1,66 +1,75 @@
 [
   {
-    "id": "bloombase-news-index-capture",
-    "title": "Preserved Bloombase news index capture",
-    "eyebrow": "Archive capture · first-party chronology surface",
-    "summary": "A local preserved copy of the Bloombase news-and-events index turns the release trail itself into evidence. Instead of citing the company chronology abstractly, the chronicle can now show the index page that exposes the 2012 → 2025 sequence in one place.",
-    "capturePath": "./news-index.html",
-    "captureLabel": "Open preserved HTML capture",
-    "capturedFrom": "https://www.bloombase.com/news_and_events",
-    "capturedFromLabel": "Original Bloombase news index",
-    "coverageLabel": "Visible chronology coverage",
-    "coverageValue": "2012 → 2025",
+    "id": "capture-dku-article",
+    "eyebrow": "Archive capture · DKU institutional source",
+    "title": "Duke Kunshan University SGC article",
+    "summary": "Comprehensive institutional article documenting Startup Go Camp's structure, methodology, and outcomes.",
+    "coverage": "Complete coverage of SGC program",
+    "captureDate": "2025",
+    "url": "https://ine.dukekunshan.edu.cn/the-entrepreneurial-practice-and-dream-incubation-of-sgc/",
+    "highlights": [
+      {
+        "label": "Identification",
+        "title": "Three organizational roles confirmed",
+        "text": "Article identifies Kehan Dong as 'angel investor, founder of Inner Journey, and founder of the NGO Code of Love.'"
+      },
+      {
+        "label": "Student satisfaction",
+        "title": "90.4/100 course rating",
+        "text": "Students rated the course as high as 90.4 points and expressed their love for the course many times."
+      },
+      {
+        "label": "Teaching methodology",
+        "title": "Office Hours approach",
+        "text": "4-hour weekly Office Hours for high-quality interaction, creating space for students to share ideas without fear of judgment."
+      }
+    ],
     "metrics": [
       {
-        "value": "16",
-        "label": "Visible dated entries"
+        "label": "Course duration",
+        "value": "6 weeks"
       },
       {
-        "value": "2013",
-        "label": "Founder trail turns dense"
-      },
-      {
-        "value": "2019",
-        "label": "Partner-hosted Marvell proof included"
-      },
-      {
-        "value": "1",
-        "label": "Commented-out 2017 Huawei entry preserved in source"
+        "label": "Student rating",
+        "value": "90.4/100"
       }
     ],
     "notes": [
-      "Useful because it proves the chronology is not assembled only from scattered direct URLs; the index itself shows the release cadence on a first-party page.",
-      "The commented-out Huawei 2017 block remains visible in the preserved HTML, which is valuable for explaining why the site keeps that source as supporting chronology even though it is not rendered live on the page."
-    ],
-    "entryHighlights": [
+      "Primary source for SGC chapter",
+      "Confirms three organizational affiliations",
+      "Documents teaching philosophy and methodology"
+    ]
+  },
+  {
+    "id": "capture-kehandong-website",
+    "eyebrow": "Archive capture · Personal website",
+    "title": "kehandong.com personal profile",
+    "summary": "Personal website articulating current focus and core philosophy.",
+    "coverage": "Current mission and approach",
+    "captureDate": "2026",
+    "url": "https://kehandong.com/",
+    "highlights": [
       {
-        "dateLabel": "Dec 12, 2012",
-        "title": "Open Virtualization Alliance overview by Bloombase",
-        "summary": "Shows the bridge source that predates the denser first-party release run."
+        "label": "Core philosophy",
+        "title": "Early building and unconventional paths",
+        "text": "'I work with people who start building earlier than they're supposed to. Early founders, unconventional paths, long-term agency.'"
       },
       {
-        "dateLabel": "Feb 18, 2013",
-        "title": "Bloombase joins OpenStack community",
-        "summary": "Where the founder-era chronology becomes direct and company-hosted."
-      },
-      {
-        "dateLabel": "Mar 5, 2019",
-        "title": "Marvell Teams with Bloombase for LiquidSecurity Network HSM",
-        "summary": "Important because the first-party index itself points out to a partner-hosted press release, thickening the trust-layer story."
-      },
-      {
-        "dateLabel": "Apr 29, 2025",
-        "title": "Bloombase and Utimaco announce technology alliance for the AI era",
-        "summary": "Extends the same chronology surface into the present-tense AI chapter."
+        "label": "Integrated approach",
+        "title": "Three-domain focus",
+        "text": "Investing, writing, and building systems around early founders, education, and long-term agency."
       }
     ],
-    "sourceIds": [
-      "bloombase-news-index-capture-2026",
-      "bloombase-news-index",
-      "ova-2012",
-      "openstack-2013",
-      "marvell-2019",
-      "utimaco-2025"
+    "metrics": [
+      {
+        "label": "Focus areas",
+        "value": "3 domains"
+      }
+    ],
+    "notes": [
+      "Primary source for current focus chapter",
+      "Clearly articulates investment philosophy",
+      "Defines integrated systems approach"
     ]
   }
 ]

@@ -3,37 +3,38 @@
     "slides": [
       {
         "type": "overview",
+        "location": {
+          "lat": 30,
+          "lon": 110,
+          "zoom": 3
+        },
         "text": {
-          "headline": "The Geographic Arc",
-          "text": "A founder journey across research, Silicon Valley, security infrastructure, and global expansion."
+          "headline": "Kehan Dong",
+          "text": "Angel investor, educator, and founder building systems around early founders, education, and long-term agency."
         }
       },
       {
-        "location": { "lat": 22.4196, "lon": 114.2068, "zoom": 8 },
+        "type": "overview",
+        "location": {
+          "lat": 31.3890,
+          "lon": 120.9800,
+          "zoom": 9
+        },
         "text": {
-          "headline": "Hong Kong / CUHK",
-          "text": "Sean Xiang's doctoral foundation in Electrical and Electronic Engineering at The Chinese University of Hong Kong."
+          "headline": "Duke Kunshan University / Startup Go Camp",
+          "text": "Co-founded and taught SGC, achieving 90.4/100 student rating through innovative teaching methodology combining business cases with personal experience."
         }
       },
       {
-        "location": { "lat": 33.6405, "lon": -117.8443, "zoom": 9 },
+        "type": "overview",
+        "location": {
+          "lat": 20,
+          "lon": 0,
+          "zoom": 1.5
+        },
         "text": {
-          "headline": "Irvine / Beckman Laser Institute",
-          "text": "Research chapter at UC Irvine's Beckman Laser Institute before the entrepreneurial arc."
-        }
-      },
-      {
-        "location": { "lat": 37.4852, "lon": -122.2364, "zoom": 10 },
-        "text": {
-          "headline": "Redwood City / Silicon Valley",
-          "text": "Bloombase origin story in the heart of Silicon Valley."
-        }
-      },
-      {
-        "location": { "lat": 49.2827, "lon": -123.1207, "zoom": 8 },
-        "text": {
-          "headline": "Canada / Expansion",
-          "text": "A visible expansion chapter tied to startup visa and future-facing technical ecosystem development."
+          "headline": "Global impact",
+          "text": "Inner Journey has transformed 1000+ lives over 25+ years. Angel investing supports early-stage founders globally. Code of Love NGO extends educational impact."
         }
       }
     ]

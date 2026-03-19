@@ -1,354 +1,198 @@
 [
   {
-    "id": "shanxi-birth",
-    "phase": "Shanxi",
+    "id": "early-education",
+    "phase": "Formation",
     "range": "Early years",
-    "title": "Born in Shanxi",
-    "dek": "Sean Xiang was born in Shanxi.",
-    "narrative": [],
+    "title": "Educational foundation",
+    "dek": "Kehan Dong's early educational journey laid the groundwork for his future work in entrepreneurship and education.",
+    "narrative": [
+      "The foundation for Kehan Dong's work with early founders and unconventional paths began with his own educational experiences, which shaped his understanding of how people discover what they're capable of."
+    ],
     "proofPoints": [],
-    "locationId": "shanxi-birthplace",
-    "locationIds": ["shanxi-birthplace"],
-    "mapCaption": "Born in Shanxi.",
+    "locationId": "china-early",
+    "locationIds": ["china-early"],
+    "mapCaption": "Early educational formation in China.",
     "mapCamera": {
-      "center": [
-        112.8518,
-        35.4907
-      ],
-      "zoom": 5.0,
+      "center": [114.0579, 30.5928],
+      "zoom": 4.5,
       "pitch": 18,
       "bearing": -10
     },
-    "sources": [
-      "dossier",
-      "timeline-v2"
-    ],
+    "sources": ["kehandong-website", "dku-article"],
     "evidenceProfile": {
       "stanceLabel": "Evidence stance",
-      "stance": "Restrained narrative",
+      "stance": "Foundational narrative",
       "strengthLabel": "Source mix",
-      "strength": "Narrative chapter",
+      "strength": "Public profile and institutional sources",
       "artifactLabel": "Artifact readiness",
-      "artifact": "Early life chapter"
+      "artifact": "Formation chapter"
     }
   },
   {
-    "id": "hefei-ustc",
-    "phase": "USTC",
-    "range": "1980",
-    "title": "Entering USTC",
-    "dek": "Admitted to USTC in Hefei in 1980, majoring in Physics.",
+    "id": "inner-journey-founding",
+    "phase": "Inner Journey",
+    "range": "Founded",
+    "title": "Inner Journey: Transformational work with founders",
+    "dek": "Founded Inner Journey to help founders and leaders align inner development with outer achievement through conscious growth.",
     "narrative": [
-      "This marked the formal beginning of a highly accelerated academic and technical trajectory, laying a rigorous foundation in the sciences."
-    ],
-    "proofPoints": [],
-    "locationId": "hefei",
-    "locationIds": ["hefei"],
-    "mapCaption": "Xiang entered USTC in Hefei, Anhui in 1980, majoring in Physics.",
-    "mapCamera": {
-      "center": [
-        117.2638,
-        31.8390
-      ],
-      "zoom": 5.0,
-      "pitch": 18,
-      "bearing": -10
-    },
-    "sources": [
-      "dossier",
-      "timeline-v2"
-    ],
-    "evidenceProfile": {
-      "stanceLabel": "Evidence stance",
-      "stance": "Restrained narrative",
-      "strengthLabel": "Source mix",
-      "strength": "Narrative chapter",
-      "artifactLabel": "Artifact readiness",
-      "artifact": "Academic foundation chapter"
-    }
-  },
-  {
-    "id": "research-formation",
-    "phase": "CUHK",
-    "range": "Graduate era – 1997",
-    "title": "A long research arc before Silicon Valley",
-    "dek": "A Ph.D. in Electrical and Electronic Engineering from CUHK, followed by a Research Associate role at HKUST, preceded everything that followed.",
-    "narrative": [
-      "Sean Xiang’s trajectory did not begin with a leap into entrepreneurship, but with a rigorous academic foundation. Earning a Ph.D. in Electrical and Electronic Engineering from The Chinese University of Hong Kong, he established a deep technical baseline.",
-      "After CUHK, a Research Associate role at HKUST (1996–1997) extended his research depth before the move to California. This scientific grounding proved crucial — the later Bloombase architecture proved resilient across multiple computing waves precisely because of this formation period."
-    ],
-    "proofPoints": [],
-    "locationId": "hong-kong",
-    "locationIds": ["hong-kong"],
-    "mapCaption": "Ph.D. formation at The Chinese University of Hong Kong in Electrical and Electronic Engineering.",
-    "mapCamera": {
-      "center": [
-        114.2068,
-        22.4196
-      ],
-      "zoom": 10.5,
-      "pitch": 34,
-      "bearing": 6
-    },
-    "sources": [
-      "launch-academy",
-      "timeline-v2"
-    ],
-    "evidenceProfile": {
-      "stanceLabel": "Evidence stance",
-      "stance": "Public profile-backed chapter",
-      "strengthLabel": "Source mix",
-      "strength": "Third-party connective source plus timeline synthesis",
-      "artifactLabel": "Artifact readiness",
-      "artifact": "Research formation chapter"
-    }
-  },
-  {
-    "id": "california-transition",
-    "phase": "Beckman",
-    "range": "1997–1999",
-    "title": "Bridging science and technology strategy",
-    "dek": "Scientist at the Beckman Laser Institute & Medical Clinic, UC Irvine, August 1997 to December 1999.",
-    "narrative": [
-      "The move from Hong Kong to California shifted the geography and the network — from academic formation toward the institutional ecosystems of the American technology sector, setting the stage for the company-building phase that followed."
-    ],
-    "proofPoints": [],
-    "locationId": "irvine",
-    "locationIds": ["irvine"],
-    "mapCaption": "Scientist at the Beckman Laser Institute, UC Irvine — the transition from pure academia toward company-building.",
-    "mapCamera": {
-      "center": [
-        -117.8443,
-        33.6405
-      ],
-      "zoom": 10.5,
-      "pitch": 30,
-      "bearing": -18
-    },
-    "sources": [
-      "launch-academy",
-      "dossier"
-    ],
-    "evidenceProfile": {
-      "stanceLabel": "Evidence stance",
-      "stance": "Bridge chapter with one key public profile anchor",
-      "strengthLabel": "Source mix",
-      "strength": "Third-party profile plus dossier synthesis",
-      "artifactLabel": "Artifact readiness",
-      "artifact": "California transition chapter"
-    }
-  },
-  {
-    "id": "founding-bloombase",
-    "phase": "Bloombase",
-    "range": "2012–present",
-    "title": "Bloombase is the long arc: enterprise data security built for endurance",
-    "dek": "Co-Founder & CEO of Bloombase since January 2012 — a multi-era infrastructure build embedding specialized security within global enterprise systems.",
-    "narrative": [
-      "Establishing headquarters in Redwood City placed Bloombase directly within Silicon Valley's infrastructure ecosystem — a strategic alignment with cloud ecosystems, hardware security module vendors, and enterprise buyers who demanded uncompromising platform trust.",
-      "In this highly unforgiving enterprise security market, Bloombase laid the groundwork for decades of architectural relevance."
+      "Kehan Dong founded Inner Journey as a transformational program for founders and leaders experiencing the cost of scaling without inner alignment. The program draws on 25+ years of experience and ancient wisdom, offering a holistic and measurable approach to conscious leadership.",
+      "Inner Journey focuses on three core transitions: from outer achievement to inner alignment, from self-mastery to conscious leadership, and from doing to being. The program has transformed over 1000 lives, helping founders shift from striving to flow."
     ],
     "proofPoints": [
-      "2013 releases across OpenStack, EMC, and VMware demonstrate early and deep platform integration.",
-      "2012 appearances in the Open Virtualization Alliance show early positioning in cloud security.",
-      "2014 advisory board expansion highlights early strategic organizational growth."
+      "25+ years of experience in transformational work",
+      "1000+ lives transformed through the program",
+      "Based on ancient wisdom with holistic and measurable approach"
     ],
-    "locationId": "redwood-city",
-    "locationIds": ["redwood-city"],
-    "mapCaption": "Bloombase founded in Redwood City, Silicon Valley.",
+    "locationId": "global-distributed",
+    "locationIds": ["global-distributed"],
+    "mapCaption": "Inner Journey serves founders and leaders globally.",
     "mapCamera": {
-      "center": [
-        -122.2364,
-        37.4852
-      ],
-      "zoom": 10.5,
-      "pitch": 28,
-      "bearing": -22
+      "center": [0, 20],
+      "zoom": 1.5,
+      "pitch": 10,
+      "bearing": 0
     },
-    "sources": [
-      "ova-2012",
-      "bloombase-about",
-      "bloombase-offices",
-      "slayton-2014",
-      "bloombase-news-index",
-      "openstack-2013",
-      "emc-2013",
-      "vmware-2013",
-      "dossier",
-      "timeline-v2"
-    ],
+    "sources": ["inner-journey-website", "kehandong-website"],
     "evidenceProfile": {
       "stanceLabel": "Evidence stance",
-      "stance": "Company-spine chapter",
+      "stance": "Founder chapter",
       "strengthLabel": "Source mix",
-      "strength": "Primary company URLs now support a stronger founding and geography layer",
+      "strength": "Direct organizational website and public profile",
       "artifactLabel": "Artifact readiness",
-      "artifact": "Source cards ready"
+      "artifact": "Inner Journey founding chapter"
     }
   },
   {
-    "id": "enterprise-validation",
-    "phase": "Expand",
-    "range": "2014–2020",
-    "title": "Validation accumulates through alliances, certifications, and interoperability",
-    "dek": "A dense network of certifications and partnerships established Bloombase as a universally trusted layer in enterprise infrastructure.",
+    "id": "code-of-love-ngo",
+    "phase": "Code of Love",
+    "range": "Founded",
+    "title": "Code of Love NGO: Social impact through education",
+    "dek": "Founded Code of Love, an NGO focused on social impact and educational initiatives.",
     "narrative": [
-      "From 2014 to 2020, Bloombase methodically expanded its interoperability map. Announcements cataloged deep technical integration with Dell, Hitachi, HP ESKM, Thales ASAP, IBM, VMware Cloud on AWS, and Microsoft Azure Marketplace.",
-      "These milestones represent more than a collection of alliances; they show a clear accumulation pattern of trust. Across changing infrastructure regimes, Bloombase consistently positioned itself at the nexus where data security and performance are non-negotiable."
+      "As founder of the Code of Love NGO, Kehan Dong extended his commitment to education and social impact beyond the entrepreneurial sphere. The organization represents his belief in creating environments that make early discovery possible for all."
+    ],
+    "proofPoints": [],
+    "locationId": "global-distributed",
+    "locationIds": ["global-distributed"],
+    "mapCaption": "Code of Love operates as a global NGO.",
+    "mapCamera": {
+      "center": [0, 20],
+      "zoom": 1.5,
+      "pitch": 10,
+      "bearing": 0
+    },
+    "sources": ["dku-article", "kehandong-website"],
+    "evidenceProfile": {
+      "stanceLabel": "Evidence stance",
+      "stance": "NGO founding chapter",
+      "strengthLabel": "Source mix",
+      "strength": "Institutional mention and profile",
+      "artifactLabel": "Artifact readiness",
+      "artifact": "NGO chapter"
+    }
+  },
+  {
+    "id": "angel-investing",
+    "phase": "Investing",
+    "range": "Ongoing",
+    "title": "Angel investing in early-stage founders",
+    "dek": "Active angel investor supporting people who start building earlier than they're supposed to, focusing on unconventional paths and long-term agency.",
+    "narrative": [
+      "Kehan Dong's investment philosophy centers on supporting early founders who take unconventional paths. He works with people who start building before they're 'supposed to,' believing that the right environment can unlock early discovery of capability.",
+      "His investment approach integrates with his educational work, creating a comprehensive system around early founders, education, and long-term agency."
     ],
     "proofPoints": [
-      "2013-2014: Early validation established with OpenStack, EMC, VMware, Dell, and Hitachi.",
-      "2015-2017: Certifications with HP, Thales, Ultra Electronics, HPE, IBM, ATTO, and Huawei deepen custody and storage trust.",
-      "2018-2020: Public cloud scale confirmed through VMware Cloud on AWS and Microsoft Azure Marketplace.",
-      "Hardware security module (HSM) integrations widened aggressively through Marvell, nCipher, and Futurex."
+      "Focus on early-stage founders and unconventional paths",
+      "Integration of investment with educational systems"
     ],
-    "locationId": "redwood-city",
-    "locationIds": ["redwood-city"],
-    "mapCaption": "Enterprise validation years based in Silicon Valley.",
+    "locationId": "global-distributed",
+    "locationIds": ["global-distributed"],
+    "mapCaption": "Angel investing across global startup ecosystems.",
     "mapCamera": {
-      "center": [
-        -122.2364,
-        37.4852
-      ],
+      "center": [0, 20],
+      "zoom": 1.5,
+      "pitch": 10,
+      "bearing": 0
+    },
+    "sources": ["kehandong-website", "dku-article"],
+    "evidenceProfile": {
+      "stanceLabel": "Evidence stance",
+      "stance": "Investment chapter",
+      "strengthLabel": "Source mix",
+      "strength": "Public profile and institutional sources",
+      "artifactLabel": "Artifact readiness",
+      "artifact": "Angel investing chapter"
+    }
+  },
+  {
+    "id": "dku-startup-go-camp",
+    "phase": "Duke Kunshan",
+    "range": "2024-2025",
+    "title": "Startup Go Camp at Duke Kunshan University",
+    "dek": "Co-founded and taught Startup Go Camp (SGC) at Duke Kunshan University, a 6-week intensive entrepreneurial course achieving 90.4/100 student rating.",
+    "narrative": [
+      "In collaboration with Duke Kunshan University's Innovation and Entrepreneurship Initiative, Kehan Dong co-founded Startup Go Camp (SGC), a comprehensive entrepreneurial series course tailored for student entrepreneurs. The program provides guidance for the initial stage of entrepreneurship from 0 to 1.",
+      "The 6-week course covers entrepreneurial basics, market demand identification, user research, MVP development, business strategy, team management, and finding financing. Kehan combines classic business cases like Facebook's startup story with his own entrepreneurial experience.",
+      "A distinctive feature is the 4-hour weekly Office Hours, which Kehan considers crucial for high-quality interaction with students. The course achieved a remarkable 90.4/100 student satisfaction rating, with many students continuing to build their projects after completion."
+    ],
+    "proofPoints": [
+      "90.4/100 student satisfaction rating",
+      "6-week intensive covering full entrepreneurial journey",
+      "4-hour weekly Office Hours for personalized mentorship",
+      "Students launched real entrepreneurial projects",
+      "Strong participation from freshmen"
+    ],
+    "locationId": "kunshan-dku",
+    "locationIds": ["kunshan-dku"],
+    "mapCaption": "Startup Go Camp at Duke Kunshan University in Kunshan, Jiangsu Province, China.",
+    "mapCamera": {
+      "center": [120.9800, 31.3890],
       "zoom": 9.0,
-      "pitch": 44,
-      "bearing": -8
-    },
-    "sources": [
-      "openstack-2013",
-      "emc-2013",
-      "vmware-2013",
-      "vmware-2014",
-      "hitachi-2014",
-      "hp-2015",
-      "thales-2015",
-      "hpe-2015",
-      "ibm-2017",
-      "huawei-2017",
-      "vmware-aws-2018",
-      "azure-2019",
-      "marvell-2019",
-      "ncipher-2019",
-      "futurex-2020"
-    ],
-    "evidenceProfile": {
-      "stanceLabel": "Evidence stance",
-      "stance": "Strongest historical chapter",
-      "strengthLabel": "Source mix",
-      "strength": "Dense first-party alliance and certification trail",
-      "artifactLabel": "Artifact readiness",
-      "artifact": "Ready for richer document-style artifact cards"
-    }
-  },
-  {
-    "id": "geographic-expansion",
-    "phase": "Vancouver",
-    "range": "2018 onward",
-    "title": "The geography widens: strategic expansion to Canada",
-    "dek": "Expansion beyond Silicon Valley emphasized global talent, advanced cryptography capability, and strategic ecosystem scale.",
-    "narrative": [
-      "Recognizing the increasing global demand for rigorous data protection, Bloombase strategically expanded its operations into Canada. As detailed in a 2018 Launch Academy profile, Vancouver provided a strong talent pool, advanced cryptography resources, and a supportive technology ecosystem.",
-      "This geographic shift marked a transition from a Silicon Valley-centric operation to a mature, international engineering organization structured for scale."
-    ],
-    "proofPoints": [
-      "Vancouver office launch captured in 2018 Launch Academy profile."
-    ],
-    "locationId": "vancouver",
-    "locationIds": ["vancouver"],
-    "mapCaption": "Bloombase expands to Vancouver for cryptography talent and ecosystem scale.",
-    "mapCamera": {
-      "center": [
-        -123.1207,
-        49.2827
-      ],
-      "zoom": 5.25,
-      "pitch": 32,
-      "bearing": 14
-    },
-    "sources": [
-      "launch-academy",
-      "timeline-v2"
-    ],
-    "evidenceProfile": {
-      "stanceLabel": "Evidence stance",
-      "stance": "Selective expansion chapter",
-      "strengthLabel": "Source mix",
-      "strength": "One strong public expansion profile plus chronology support",
-      "artifactLabel": "Artifact readiness",
-      "artifact": "Geographic expansion chapter"
-    }
-  },
-  {
-    "id": "shenzhen-academic",
-    "phase": "Shenzhen",
-    "range": "2018–2023",
-    "title": "Parallel academic chapter: Founding Dean and Institute co-founder in Shenzhen",
-    "dek": "Alongside leading Bloombase, Sean Xiang built an academic track in Shenzhen — Founding Dean of the School of Artificial Intelligence at Shenzhen Technology University, then Chair Professor and Co-founder at the X-Institute of Shenzhen.",
-    "narrative": [
-      "Both roles were part-time and ran in parallel with his CEO duties at Bloombase. This parallel academic arc reflects the same technical thesis: that AI-era infrastructure demands deep cryptographic and security foundations."
-    ],
-    "proofPoints": [],
-    "locationId": "shenzhen",
-    "locationIds": ["shenzhen"],
-    "mapCaption": "Shenzhen academic chapter: Founding Dean of AI at SZTech, then X-Institute co-founder.",
-    "mapCamera": {
-      "center": [
-        114.0579,
-        22.5431
-      ],
-      "zoom": 5.5,
       "pitch": 28,
       "bearing": 0
     },
-    "sources": [
-      "dossier"
-    ],
+    "sources": ["dku-article"],
     "evidenceProfile": {
       "stanceLabel": "Evidence stance",
-      "stance": "LinkedIn-confirmed institutional roles",
+      "stance": "Strongest educational chapter",
       "strengthLabel": "Source mix",
-      "strength": "Direct LinkedIn profile data",
+      "strength": "Direct institutional article with detailed coverage",
       "artifactLabel": "Artifact readiness",
-      "artifact": "Shenzhen academic chapter"
+      "artifact": "Ready for rich educational artifact cards"
     }
   },
   {
-    "id": "ai-era",
-    "phase": "AI era",
-    "range": "2023–now",
-    "title": "The current chapter is not nostalgia — it is AI infrastructure",
-    "dek": "Rebuilding enterprise security primitives for the AI-infrastructure era: post-quantum cryptography, NVIDIA accelerators, and a new standards-layer presence.",
+    "id": "current-focus",
+    "phase": "Present",
+    "range": "2026",
+    "title": "Current focus: Systems around early founders and education",
+    "dek": "Building integrated systems around early founders, education, and long-term agency through investing, writing, and program development.",
     "narrative": [
-      "In 2023, Bloombase rebuilt data-at-rest encryption to run natively on NVIDIA DPUs and GPUs — a technical argument that security must operate at the accelerator level to avoid becoming a bottleneck in AI data pipelines. At NVIDIA GTC 2024, Sean Xiang served as a panelist on AI-era cyber defense alongside executives from NVIDIA, Qrypt, and Reality Defender; the Bloombase booth demonstrated post-quantum cryptography (PQC) encryption powered by NVIDIA GPU, DPU, and Morpheus AI.",
-      "In 2025, a strategic alliance with Utimaco delivered integrated NIST FIPS 140-2 Level 3 certified HSM key protection and OASIS KMIP-compliant key management for AI-era workloads. Bloombase also joined the PKI Consortium in November 2024, deepening its participation in cryptographic standards infrastructure."
+      "Kehan Dong's current work integrates three core activities: angel investing in early-stage founders, writing about entrepreneurship and education, and building systems that support unconventional paths to success.",
+      "His focus remains on the question: How do people discover what they're capable of early, and what environments make that possible? This inquiry drives his investment decisions, educational programs, and organizational development."
     ],
     "proofPoints": [
-      "2024: Entrust partnership integrating StoreSafe with nShield Connect HSMs."
+      "Active across investing, writing, and system building",
+      "Focus on early discovery and capability development",
+      "Creating environments for unconventional success"
     ],
-    "locationId": "global-ai",
-    "locationIds": ["global-ai"],
-    "mapCaption": "Bloombase integrates with NVIDIA, Utimaco, and global cloud infrastructure.",
+    "locationId": "global-distributed",
+    "locationIds": ["global-distributed"],
+    "mapCaption": "Current work spans global entrepreneurial and educational ecosystems.",
     "mapCamera": {
-      "center": [
-        8,
-        24
-      ],
+      "center": [0, 20],
       "zoom": 1.35,
       "pitch": 10,
       "bearing": 0
     },
-    "sources": [
-      "nvidia-2023",
-      "utimaco-2025",
-      "dossier"
-    ],
+    "sources": ["kehandong-website"],
     "evidenceProfile": {
       "stanceLabel": "Evidence stance",
       "stance": "Present-tense relevance chapter",
       "strengthLabel": "Source mix",
-      "strength": "Direct Bloombase sources with a clear AI-era frame",
+      "strength": "Direct personal website with clear current focus",
       "artifactLabel": "Artifact readiness",
-      "artifact": "Best candidate for stronger media / announcement treatment"
+      "artifact": "Current direction chapter"
     }
   }
 ]
