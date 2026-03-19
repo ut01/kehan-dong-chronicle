@@ -18,9 +18,9 @@ python3 -m http.server 8000
 
 ### 1. Hero Section
 - [ ] Title shows "Kehan Dong"
-- [ ] Lede text mentions "Angel investor, educator, and founder"
+- [ ] Lede text mentions "Founder, angel investor, and educator"
 - [ ] Chips show: Angel Investor, Inner Journey Founder, Code of Love NGO, Duke Kunshan University, Startup Go Camp
-- [ ] Stats show: "1000+ lives transformed", "90.4/100 student rating", "Investor → Educator → Founder"
+- [ ] Stats show: "1000+ lives transformed", "90.4/100 student rating", "Founder → Investor → Educator"
 
 ### 2. Chapter Navigation
 - [ ] Phase rail shows 6 chapters
