@@ -186,7 +186,7 @@
       backdrop-filter: blur(18px); border: 1px solid rgba(31,39,50,.08); box-shadow: 0 8px 24px rgba(31,39,50,.09);
     }
     .phase-rail ol {
-      display: grid; grid-template-columns: repeat(9, minmax(0,1fr)); gap: 6px; list-style: none; margin: 0; padding: 0;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 6px; list-style: none; margin: 0; padding: 0;
     }
     .phase-rail a {
       display: block; text-decoration: none; padding: 7px 8px; border-radius: 10px;
@@ -5172,7 +5172,7 @@
           return {
             chapterId: chapter.id,
             kind: 'anchor',
-            routeLabel: `Anchored in ${current.name}`,
+            routeLabel: current.label || `Anchored in ${current.name}`,
             modeLabel: 'Location stays fixed',
             featureCollection: { type: 'FeatureCollection', features: [] },
             previousLocationName: current.name

@@ -55,7 +55,7 @@
       "YC eventually paused the China initiative as Sam focused on OpenAI. This experience shaped thinking about early-stage founders, scalable talent discovery, and world-class entrepreneurship platforms."
     ],
     "sources": ["kehandong-website"],
-    "locationId": "china-early",
+    "locationId": "china-yc",
     "sortOrder": 4
   },
   {
@@ -70,7 +70,7 @@
       "Built a 7,000+ member intern sourcing engine and developed a scalable model for discovering high-potential young founders. Sam Altman later noted that the intern-based system built at YC China was more effective than YC's Startup School for young people learning entrepreneurship."
     ],
     "sources": ["kehandong-website"],
-    "locationId": "china-early",
+    "locationId": "china-miracleplus",
     "sortOrder": 5
   },
   {
@@ -88,5 +88,20 @@
     "sources": ["kehandong-website"],
     "locationId": "us-universities",
     "sortOrder": 6
+  },
+  {
+    "id": "global-expansion",
+    "title": "Global Student Founder Platform",
+    "range": "2026 - Future",
+    "phase": "Future",
+    "dek": "Building a global platform for young founders, especially 华裔 (Chinese diaspora) students across China and the US.",
+    "description": "Expanding the entrepreneurship platform globally with a focus on connecting talented young builders across borders. Special emphasis on supporting 华裔 students who bridge Chinese and American educational and entrepreneurial ecosystems. Creating pathways for cross-cultural collaboration, mentorship networks, and early-stage funding for the next generation of global founders.",
+    "narrative": [
+      "Expanding the entrepreneurship platform globally with a focus on connecting talented young builders across borders. Special emphasis on supporting 华裔 students who bridge Chinese and American educational and entrepreneurial ecosystems.",
+      "Creating pathways for cross-cultural collaboration, mentorship networks, and early-stage funding for the next generation of global founders."
+    ],
+    "sources": ["kehandong-website"],
+    "locationId": "global-distributed",
+    "sortOrder": 7
   }
 ]

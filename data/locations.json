@@ -2,7 +2,7 @@
   {
     "id": "china-early",
     "name": "China",
-    "label": "Early educational formation",
+    "label": "Early educational foundation in China",
     "lat": 30.5928,
     "lon": 114.0579,
     "summary": "Early educational foundation in China.",
@@ -46,6 +46,30 @@
     "camera": {
       "center": [0, 20],
       "zoom": 1.5
+    }
+  },
+  {
+    "id": "china-yc",
+    "name": "China",
+    "label": "Y Combinator China founding team",
+    "lat": 31.2304,
+    "lon": 121.4737,
+    "summary": "Joined YC China founding team in Shanghai, working with Sam Altman on investment evaluation and founder support.",
+    "camera": {
+      "center": [121.4737, 31.2304],
+      "zoom": 5.0
+    }
+  },
+  {
+    "id": "china-miracleplus",
+    "name": "China",
+    "label": "MiraclePlus scaling operations",
+    "lat": 39.9042,
+    "lon": 116.4074,
+    "summary": "Core founding team member at MiraclePlus, scaling investment operations and building the intern sourcing engine.",
+    "camera": {
+      "center": [116.4074, 39.9042],
+      "zoom": 5.0
     }
   }
 ]
