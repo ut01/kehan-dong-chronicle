@@ -24,5 +24,31 @@
     "year": "2026",
     "claimScope": "Inner Journey program details, philosophy, and approach",
     "notes": "Official Inner Journey website describing the transformational program for founders and leaders. Details 25+ years experience, 1000+ lives transformed, and the three-phase journey from outer achievement to inner alignment."
+  },
+  {
+    "id": "linkedin-profile",
+    "label": "LinkedIn Profile",
+    "url": "https://www.linkedin.com/in/kehan-roderick-dong-47817884/",
+    "publisherLabel": "LinkedIn",
+    "publisherType": "first-party",
+    "evidenceLabel": "Professional Profile",
+    "directnessLabel": "Primary source",
+    "verificationState": "direct",
+    "year": "2026",
+    "claimScope": "Professional experience and roles",
+    "notes": "Personal LinkedIn profile providing detailed work experience."
+  },
+  {
+    "id": "code-of-love-website",
+    "label": "The Code of Love NGO",
+    "url": "https://www.thecodeoflove.org/",
+    "publisherLabel": "The Code of Love",
+    "publisherType": "first-party",
+    "evidenceLabel": "Organizational website",
+    "directnessLabel": "Primary organizational source",
+    "verificationState": "direct",
+    "year": "2026",
+    "claimScope": "The Code of Love program details",
+    "notes": "Official website for The Code of Love NGO."
   }
 ]

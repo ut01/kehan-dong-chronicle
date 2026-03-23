@@ -1,16 +1,22 @@
 [
   {
     "id": "code-of-love-ngo",
-    "title": "The Code of Love NGO",
+    "title": "Founder and President",
     "range": "May 2011 - 2019",
-    "phase": "Foundation",
+    "phase": "The Code of Love",
     "dek": "Founded The Code of Love while in high school in Shanghai. Grew from a small volunteer initiative into a long-running nonprofit focused on reducing educational inequality.",
-    "description": "Organized 1,700+ volunteers and delivered educational programs to 6,500+ underprivileged students across five countries. Built libraries, supported rural teaching programs, and connected students with long-term sponsorships through university. This experience shaped values around responsibility, scale, and impact, and led to a shift toward technology and innovation-driven education.",
+    "description": "Over eight years, organized 1,700+ volunteers and delivered educational programs to more than 6,500 underprivileged students across five countries. Built libraries, supported rural teaching programs, and connected students from low-income backgrounds with long-term sponsorships so they can complete their education through university. Realized that while traditional charity matters, technology and innovation-driven education create far greater leverage, leading to a shift toward science, technology, and entrepreneurship education.",
     "narrative": [
-      "Organized 1,700+ volunteers and delivered educational programs to 6,500+ underprivileged students across five countries. Built libraries, supported rural teaching programs, and connected students with long-term sponsorships through university.",
-      "This experience shaped values around responsibility, scale, and impact, and led to a shift toward technology and innovation-driven education."
+      "I founded The Code of Love while I was still in high school in Shanghai. What began as a small volunteer initiative grew into a long-running nonprofit organization focused on reducing educational inequality.",
+      "Over eight years, we organized 1,700+ volunteers and delivered educational programs to more than 6,500 underprivileged students across five countries. Our work included building libraries, supporting rural teaching programs, and connecting students from low-income backgrounds with long-term sponsorships to help them complete their education through university.",
+      "Through this experience, I came to a deeper realization: while traditional charity matters, technology and innovation-driven education create far greater leverage. That insight eventually led me to shift my long-term focus toward science, technology, and entrepreneurship education, aiming to help young people build skills and agency that compound over time.",
+      "This early chapter shaped my values around responsibility, scale, and impact, and continues to influence how I think about education and opportunity today."
     ],
-    "sources": ["kehandong-website"],
+    "sources": [
+      "kehandong-website",
+      "linkedin-profile",
+      "code-of-love-website"
+    ],
     "locationId": "china-early",
     "sortOrder": 1
   },
@@ -18,58 +24,68 @@
     "id": "early-education",
     "title": "University of California Dropout",
     "range": "2014",
-    "phase": "Formation",
+    "phase": "UC Dropout",
     "dek": "Attended University of California before dropping out to pursue entrepreneurship full-time.",
     "description": "Made the decision to leave formal education to focus on building and creating impact through entrepreneurship.",
     "narrative": [
       "Made the decision to leave formal education to focus on building and creating impact through entrepreneurship."
     ],
-    "sources": ["kehandong-website"],
+    "sources": [
+      "kehandong-website"
+    ],
     "locationId": "california-uc",
     "sortOrder": 2
   },
   {
     "id": "inner-journey-founding",
-    "title": "Inner Journeys",
+    "title": "Founder and CEO",
     "range": "2015 - 2019",
-    "phase": "Founding",
-    "dek": "Started Inner Journeys as a small project during junior year at university. Left school to build it full-time.",
-    "description": "Went through multiple rounds of funding, worked with an early team, and scaled the product through several iterations. Company was eventually acquired in 2020. Led to Forbes 30 Under 30 recognition and shaped understanding of building from zero, understanding users, and navigating early startup chaos. Transformed 1000+ lives over 25+ years.",
+    "phase": "Inner Journeys",
+    "dek": "Started Inner Journeys as a small project during junior year at university. Left school to build it full-time and scaled it until its acquisition in 2020.",
+    "description": "Started Inner Journeys while still in university. Grew into a full-time company, went through multiple rounds of funding, and scaled the product through several iterations. The company was eventually acquired in 2020. This journey shaped much of the thinking about building from zero, understanding users, and navigating the early chaos of a startup. Led to Forbes 30 Under 30 recognition and gave a deep appreciation for how young founders learn and grow.",
     "narrative": [
-      "Went through multiple rounds of funding, worked with an early team, and scaled the product through several iterations. Company was eventually acquired in 2020.",
-      "Led to Forbes 30 Under 30 recognition and shaped understanding of building from zero, understanding users, and navigating early startup chaos. Transformed 1000+ lives over 25+ years."
+      "I started Inner Journeys while I was still in university. What began as a small project in my junior year grew into a full-time company after I left school to build it. Over the next few years, we went through multiple rounds of funding, worked with an incredible early team, and scaled the product through several iterations.",
+      "The company was eventually acquired in 2020. This journey shaped much of how I think about building from zero, understanding users, and navigating the early chaos of a startup. It also led to being recognized by Forbes 30 Under 30, but more importantly, it gave me a deep appreciation for how young founders learn and grow."
     ],
-    "sources": ["kehandong-website", "inner-journey-website"],
+    "sources": [
+      "kehandong-website",
+      "inner-journey-website",
+      "linkedin-profile"
+    ],
     "locationId": "global-distributed",
     "sortOrder": 3
   },
   {
     "id": "yc-china",
-    "title": "Y Combinator China",
+    "title": "Associate, Founding Team",
     "range": "Mar 2019 - Nov 2019",
-    "phase": "Investing",
-    "dek": "Joined the founding team of YC China as one of the youngest members selected by YC partners.",
-    "description": "Worked with Sam Altman and the global YC network on investment evaluation, founder support, and program design. Explored how to adapt YC's principles to a new market and build a long-term ecosystem for young founders. YC eventually paused the China initiative as Sam focused on OpenAI. This experience shaped thinking about early-stage founders, scalable talent discovery, and world-class entrepreneurship platforms.",
+    "phase": "YC China",
+    "dek": "Joined the founding team of YC China in early 2019, selected as one of the youngest members to explore YC’s potential second global headquarters.",
+    "description": "Worked with Sam Altman and the global YC network to help design a YC-style model in China. Focused on investment evaluation, founder support, and program design. Explored how to adapt YC’s principles to a new market and build a long-term ecosystem for young founders. Even though the initiative ended early as Sam focused on OpenAI, this experience shaped thinking about early-stage founders, scalable talent discovery, and what it takes to build a world-class entrepreneurship platform.",
     "narrative": [
-      "Worked with Sam Altman and the global YC network on investment evaluation, founder support, and program design. Explored how to adapt YC's principles to a new market and build a long-term ecosystem for young founders.",
-      "YC eventually paused the China initiative as Sam focused on OpenAI. This experience shaped thinking about early-stage founders, scalable talent discovery, and world-class entrepreneurship platforms."
+      "It was a rare opportunity to work with Sam Altman and the global YC network, and to help design what a YC-style model could look like in China. During this period, I worked on investment evaluation, founder support, and program design. We explored how to adapt YC’s principles to a new market and how to build a long-term ecosystem for young founders. The project lasted less than a year, and YC eventually paused the China initiative as Sam focused on OpenAI and other priorities. Even though it ended early, this experience shaped a lot of my thinking about early-stage founders, scalable talent discovery, and what it takes to build a world-class entrepreneurship platform."
     ],
-    "sources": ["kehandong-website"],
+    "sources": [
+      "kehandong-website",
+      "linkedin-profile"
+    ],
     "locationId": "china-yc",
     "sortOrder": 4
   },
   {
     "id": "miracleplus",
-    "title": "MiraclePlus",
+    "title": "Investment & Operations, Founding Team",
     "range": "Mar 2019 - Aug 2025",
-    "phase": "Scaling",
-    "dek": "Core member of the founding team at MiraclePlus (formerly Y Combinator China).",
-    "description": "Worked on investment, operations, and founder support across multiple batches. Over six years, evaluated 160,000+ applications, interviewed thousands of founders, and participated in 600+ early-stage investments across AI, biotech, robotics, hard tech, and consumer. Built a 7,000+ member intern sourcing engine and developed a scalable model for discovering high-potential young founders. Sam Altman later noted that the intern-based system built at YC China was more effective than YC's Startup School for young people learning entrepreneurship.",
+    "phase": "MiraclePlus",
+    "dek": "Core member of the founding team at MiraclePlus (formerly Y Combinator China). Worked on investment, operations, and founder support across multiple batches.",
+    "description": "Over six years, evaluated 160,000+ applications, interviewed thousands of founders, and participated in 600+ early-stage investments across AI, biotech, robotics, hard tech, and consumer. Built a 7,000+ member intern sourcing engine and developed a scalable model for discovering high-potential young founders. This experience shaped a long-term curiosity around how to help young people build meaningful companies earlier in life.",
     "narrative": [
-      "Worked on investment, operations, and founder support across multiple batches. Over six years, evaluated 160,000+ applications, interviewed thousands of founders, and participated in 600+ early-stage investments across AI, biotech, robotics, hard tech, and consumer.",
-      "Built a 7,000+ member intern sourcing engine and developed a scalable model for discovering high-potential young founders. Sam Altman later noted that the intern-based system built at YC China was more effective than YC's Startup School for young people learning entrepreneurship."
+      "Over six years, We evaluated 160,000+ applications, interviewed thousands of founders, and participated in 600+ early-stage investments across AI, biotech, robotics, hard tech, and consumer. Built a 7,000+ member intern sourcing engine and developed a scalable model for discovering high-potential young founders. This experience shaped my long-term curiosity: how to help young people build meaningful companies earlier in life."
     ],
-    "sources": ["kehandong-website"],
+    "sources": [
+      "kehandong-website",
+      "linkedin-profile"
+    ],
     "locationId": "china-miracleplus",
     "sortOrder": 5
   },
@@ -77,15 +93,16 @@
     "id": "current-focus",
     "title": "Founder & Angel Investor",
     "range": "Sep 2025 - Present",
-    "phase": "Present",
-    "dek": "Exploring how to help young people (14–22) start building things earlier.",
-    "description": "After leaving MiraclePlus, spent three months traveling across 40 top U.S. universities (Harvard, MIT, Stanford, Caltech, Berkeley, CMU, Duke, etc.), meeting thousands of students through lectures, roundtables, and conversations. During the same period, invested in 30 young founders across AI, biotech, robotics, and consumer—one of the fastest early-stage investment paces globally. Currently investing as a personal angel and working closely with student founders, researchers, and early teams. Over the past six years, made 650+ early-stage investments and built the largest student founder pipelines in China. Researching a new type of entrepreneurship platform for young builders combining real-world projects, long-term mentorship, AI-native tools, and community. Delivered 130+ global university talks, including every Ivy League and C9 university.",
+    "phase": "Angel Investing",
+    "dek": "Exploring how to help young people (14–22) start building things earlier, investing in early-stage startups, and researching new education models.",
+    "description": "Invested in 30 young founders across AI, biotech, robotics, and consumer after traveling across 40 top U.S. universities. Currently investing as a personal angel and working closely with student founders, researchers, and early teams. Over the past six years, made 650+ early-stage investments and built the largest student founder pipelines in China. Researching the next chapter — a new type of entrepreneurship platform for young builders combining real-world projects, long-term mentorship, AI-native tools, and community.",
     "narrative": [
-      "After leaving MiraclePlus, spent three months traveling across 40 top U.S. universities (Harvard, MIT, Stanford, Caltech, Berkeley, CMU, Duke, etc.), meeting thousands of students through lectures, roundtables, and conversations. During the same period, invested in 30 young founders across AI, biotech, robotics, and consumer—one of the fastest early-stage investment paces globally.",
-      "Currently investing as a personal angel and working closely with student founders, researchers, and early teams. Over the past six years, made 650+ early-stage investments and built the largest student founder pipelines in China.",
-      "Researching a new type of entrepreneurship platform for young builders combining real-world projects, long-term mentorship, AI-native tools, and community. Delivered 130+ global university talks, including every Ivy League and C9 university."
+      "Right after leaving MiraclePlus, I spent three months traveling across 40 top universities in the United States — including Harvard, MIT, Stanford, Caltech, Berkeley, CMU, Duke, and more. I met thousands of students through my lectures, roundtables, and small-group conversations. These trips gave me a clearer picture of what the next generation of founders care about, and what kind of support actually moves them forward. During the same period, I invested in 30 young founders across AI, biotech, robotics, and consumer — likely one of the fastest early-stage investment paces globally. The goal wasn’t speed for its own sake, but to back people who are already building and need someone to bet on them early. Right now, I invest as a personal angel and work closely with student founders, researchers, and early teams across AI, biotech, robotics, and frontier science. Over the past six years, I’ve made 650+ early-stage investments and built the largest student founder pipelines in China. At the same time, I’m researching the next chapter — a new type of entrepreneurship platform for young builders. Something that combines real-world projects, long-term mentorship, AI-native tools, and a community of people who want to create the future. This is still in exploration mode, but the mission is clear. If you’re a young founder, a scientist interested in building, or someone thinking about new education models, I’d love to connect."
     ],
-    "sources": ["kehandong-website"],
+    "sources": [
+      "kehandong-website",
+      "linkedin-profile"
+    ],
     "locationId": "us-universities",
     "sortOrder": 6
   },
@@ -93,14 +110,17 @@
     "id": "global-expansion",
     "title": "Global Student Founder Platform",
     "range": "2026 - Future",
-    "phase": "Future",
-    "dek": "Building a global platform for young founders, especially 华裔 (Chinese diaspora) students across China and the US.",
-    "description": "Expanding the entrepreneurship platform globally with a focus on connecting talented young builders across borders. Special emphasis on supporting 华裔 students who bridge Chinese and American educational and entrepreneurial ecosystems. Creating pathways for cross-cultural collaboration, mentorship networks, and early-stage funding for the next generation of global founders.",
+    "phase": "The Next Chapter",
+    "dek": "Building a global platform for young founders, especially Chinese or Chinese diaspora students across China and the US.",
+    "description": "Expanding the entrepreneurship platform globally with a focus on connecting talented young builders across borders. Special emphasis on supporting Chinese diaspora students who bridge Chinese and American educational and entrepreneurial ecosystems. Creating pathways for cross-cultural collaboration, mentorship networks, and early-stage funding for the next generation of global founders.",
     "narrative": [
-      "Expanding the entrepreneurship platform globally with a focus on connecting talented young builders across borders. Special emphasis on supporting 华裔 students who bridge Chinese and American educational and entrepreneurial ecosystems.",
+      "Expanding the entrepreneurship platform globally with a focus on connecting talented young builders across borders. Special emphasis on supporting Chinese diaspora students who bridge Chinese and American educational and entrepreneurial ecosystems.",
       "Creating pathways for cross-cultural collaboration, mentorship networks, and early-stage funding for the next generation of global founders."
     ],
-    "sources": ["kehandong-website"],
+    "sources": [
+      "kehandong-website",
+      "linkedin-profile"
+    ],
     "locationId": "global-distributed",
     "sortOrder": 7
   }
