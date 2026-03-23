@@ -7,9 +7,9 @@ An animated founder/professional chronicle project featuring:
 - Landing page / tribute page
 - TimelineJS + StoryMapJS integration
 
-Originally created for Sean Xiang / Bloombase by Koutian Wu <https://github.com/ktwu01/>
+Now adapted for [Kehan Dong](kehandong.com)
 
-Now adapted for Kehan Dong / kehandong.com
+Template created by [Koutian Wu](https://github.com/ktwu01)
 
 ---
 
