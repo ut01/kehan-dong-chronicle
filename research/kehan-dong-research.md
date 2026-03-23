@@ -122,7 +122,7 @@ Kehan Dong is an angel investor, entrepreneur, and educator focused on early-sta
 ## Sources
 - kehandong.com (personal website)
 - Duke Kunshan University Innovation and Entrepreneurship Initiative article
-- Inner Journey website (theinnerjourneytosuccess.com)
+- Inner Journey
 - Public records and educational materials
 
 ---
